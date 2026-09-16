@@ -38,21 +38,21 @@ export default function Hero() {
         {/* Volební číslo 6 – campaign sticker in the top right corner on desktop */}
         <ElectionSticker className="hidden lg:block absolute lg:top-6 lg:right-6 xl:top-8 xl:right-8 z-20 pointer-events-auto" />
 
-        <div className="flex-none lg:flex-1 flex flex-col items-center lg:items-start z-[2] w-full">
+        <div className="flex-none lg:flex-1 flex flex-col items-center lg:items-start z-2 w-full">
           <div className="relative w-full">
-            <h1 className="relative z-[1] font-display font-bold text-cream uppercase tracking-[-0.02em] leading-[0.9] select-none">
+            <h1 className="relative z-1 font-display font-bold text-cream uppercase tracking-[-0.02em] leading-[0.9] select-none">
               <span className="block text-[clamp(4.375rem,15vw,7.5rem)] md:text-[clamp(4.5rem,8vw,7rem)]">
                 ODVAHA DĚLAT
               </span>
               <span className="block text-[clamp(4.375rem,15vw,7.5rem)] md:text-[clamp(4.5rem,8vw,7rem)]">
                 VĚCI{" "}
-                <span className="marker-strike [&::after]:!bottom-[-0.005em] [&::after]:!left-[-0.005em]">
+                <span className="marker-strike [&::after]:bottom-[-0.005em]! [&::after]:left-[-0.005em]!">
                   JINAK
                 </span>
               </span>
             </h1>
 
-            <div className="relative z-[1] flex justify-center w-full mt-2 lg:hidden pointer-events-none">
+            <div className="relative z-1 flex justify-center w-full mt-2 lg:hidden pointer-events-none">
               <div className="relative">
                 {/* Volební číslo 6 – campaign sticker behind Sáblík overlapping the hero title on mobile */}
                 <ElectionSticker className="block lg:hidden absolute -top-8 -right-5 sm:-top-10 sm:-right-4 md:-top-12 md:-right-2 z-0 pointer-events-auto" />
@@ -64,7 +64,7 @@ export default function Hero() {
                   quality={75}
                   draggable={false}
                   sizes="85vw"
-                  className="relative z-[1] select-none pointer-events-none drop-shadow-[0_8px_40px_oklch(0%_0_0_/_0.35)] [mask-image:linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)]"
+                  className="relative z-1 select-none pointer-events-none drop-shadow-[0_8px_40px_oklch(0%_0_0/0.35)] mask-[linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)]"
                   style={{
                     width: "clamp(260px, 78vw, 420px)",
                     height: "auto",
@@ -75,7 +75,7 @@ export default function Hero() {
           </div>
 
           <div className="w-full lg:mt-8">
-            <p className="relative z-[4] -mt-[clamp(2.75rem,13vw,4.75rem)] lg:mt-0 text-[clamp(1.1rem,2.5vw,1.5rem)] max-w-[600px] mb-4 text-text-muted font-semibold leading-[1.4] mx-auto lg:mx-0 [text-shadow:0_1px_18px_oklch(0%_0_0_/_0.85)] lg:[text-shadow:none]">
+            <p className="relative z-4 -mt-[clamp(2.75rem,13vw,4.75rem)] lg:mt-0 text-[clamp(1.1rem,2.5vw,1.5rem)] max-w-150 mb-4 text-text-muted font-semibold leading-[1.4] mx-auto lg:mx-0 [text-shadow:0_1px_18px_oklch(0%_0_0/0.85)] lg:text-shadow-none">
               Jsem Radko Sáblík. 24 let vedu nejžádanější střední školu v zemi -
               Smíchovskou střední, kde stavím na výsledcích, ne na prázdných
               gestech. Teď chci rozhýbat Senát. Kandiduji za obvod
@@ -111,7 +111,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hidden lg:flex flex-none lg:flex-[1.375] min-w-0 lg:self-stretch items-end justify-center lg:justify-end z-[1] w-full pointer-events-none">
+        <div className="hidden lg:flex flex-none lg:flex-[1.375] min-w-0 lg:self-stretch items-end justify-center lg:justify-end z-1 w-full pointer-events-none">
           <Image
             src={sablikImage}
             alt="Radko Sáblík – kandidát do Senátu"
@@ -119,7 +119,7 @@ export default function Hero() {
             quality={75}
             draggable={false}
             sizes="(max-width: 640px) 85vw, (max-width: 1024px) 65vw, 900px"
-            className="select-none pointer-events-none drop-shadow-[0_8px_40px_oklch(0%_0_0_/_0.35)]"
+            className="select-none pointer-events-none drop-shadow-[0_8px_40px_oklch(0%_0_0/0.35)]"
             style={{
               width: "100%",
               height: "auto",
