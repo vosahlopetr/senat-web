@@ -1,0 +1,6 @@
+# Machine-generated files (everything in .gitignore is excluded automatically)
+pnpm-lock.yaml
+.husky/_
+
+# Verbatim backups of Cursor canvas artifacts
+.cursor/canvases/

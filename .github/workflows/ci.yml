@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    env:
+      # Dummy values: src/lib/env.ts fails fast in production builds when
+      # required variables are missing. Real secrets live in Vercel.
+      RESEND_API_KEY: re_ci_dummy_key
+      SECRET_PASSPHRASE: ci-only-dummy-passphrase-not-used-in-production
+      KV_REST_API_URL: https://ci-dummy.upstash.io
+      KV_REST_API_TOKEN: ci_dummy_token
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Format check
+        run: pnpm format:check
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Test
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build

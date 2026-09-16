@@ -1,0 +1,80 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//sablikdosenatu.cz//Volby do Senatu 2026//CS
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+UID:volby-2026@sablikdosenatu.cz
+URL:https://www.sablikdosenatu.cz/jak-volit
+SOURCE;VALUE=URI:https://www.sablikdosenatu.cz/volby-2026.ics
+REFRESH-INTERVAL;VALUE=DURATION:P1W
+X-PUBLISHED-TTL:P1W
+NAME:Volby do Senátu 2026 — obvod 21
+X-WR-CALNAME:Volby do Senátu 2026 — obvod 21
+DESCRIPTION:Termíny voleb do Senátu 2026 v obvodu č. 21 (Praha 5 a Praha
+  13): 1. kolo 9.–10. října\, 2. kolo 16.–17. října.
+X-WR-CALDESC:Termíny voleb do Senátu 2026 v obvodu č. 21 (Praha 5 a Prah
+ a 13): 1. kolo 9.–10. října\, 2. kolo 16.–17. října.
+X-WR-TIMEZONE:Europe/Prague
+COLOR:navy
+BEGIN:VEVENT
+UID:volby-2026-kolo-1@sablikdosenatu.cz
+DTSTAMP:20260720T123700Z
+CREATED:20260720T000000Z
+LAST-MODIFIED:20260720T123700Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261011
+SUMMARY:Volby do Senátu – 1. kolo (a komunální volby)
+DESCRIPTION:Volební místnosti: pátek 14:00–22:00\, sobota 8:00–14:00
+ .\nS sebou platný občanský průkaz nebo cestovní pas.\nVolí se podle 
+ trvalého bydliště — obvod č. 21 tvoří Praha 5 a Praha 13.\nVše o 
+ volbách: https://www.sablikdosenatu.cz/jak-volit
+LOCATION:Vaše volební místnost — Praha 5 / Praha 13 (podle trvalého b
+ ydliště)
+STATUS:CONFIRMED
+CLASS:PUBLIC
+CATEGORIES:Volby
+TRANSP:TRANSPARENT
+URL:https://www.sablikdosenatu.cz/jak-volit
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+BEGIN:VALARM
+UID:volby-2026-kolo-1-alarm@sablikdosenatu.cz
+ACTION:DISPLAY
+TRIGGER:PT10H
+DESCRIPTION:Dnes od 14:00 se otevírají volební místnosti — volby do S
+ enátu a komunální volby. Občanka nebo pas s sebou!
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:volby-2026-kolo-2@sablikdosenatu.cz
+DTSTAMP:20260720T123700Z
+CREATED:20260720T000000Z
+LAST-MODIFIED:20260720T123700Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261018
+SUMMARY:Volby do Senátu – 2. kolo (rozhoduje)
+DESCRIPTION:Druhé kolo se koná\, pokud v 1. kole nikdo nezíská nadpolov
+ iční většinu — u nás zatím rozhodlo pokaždé.\nVolební místnost
+ i: pátek 14:00–22:00\, sobota 8:00–14:00.\nHlasovací lístky dostane
+ te až ve volební místnosti.\nS sebou platný občanský průkaz nebo ce
+ stovní pas.\nVše o volbách: https://www.sablikdosenatu.cz/jak-volit
+LOCATION:Vaše volební místnost — Praha 5 / Praha 13 (podle trvalého b
+ ydliště)
+STATUS:CONFIRMED
+CLASS:PUBLIC
+CATEGORIES:Volby
+TRANSP:TRANSPARENT
+URL:https://www.sablikdosenatu.cz/jak-volit
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+BEGIN:VALARM
+UID:volby-2026-kolo-2-alarm@sablikdosenatu.cz
+ACTION:DISPLAY
+TRIGGER:PT10H
+DESCRIPTION:Dnes od 14:00 druhé kolo senátních voleb — rozhoduje každ
+ ý hlas. Občanka nebo pas s sebou!
+END:VALARM
+END:VEVENT
+END:VCALENDAR
