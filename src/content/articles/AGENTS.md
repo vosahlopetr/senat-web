@@ -25,8 +25,8 @@ IPDI, Center for Campaign Innovation) – podrobnosti v plánu kampaně.
 
 - Před publikací si polož otázku: **„Pochopí čtenář z Prahy 13, proč se ho
   to týká?"** Pokud ne, doplň větu, která národní téma přeloží do dopadu na
-  obvod – věcně, ne jen jmenovkou („…i na Praze 13"). Odkaz na `/#program`,
-  `/muj-obvod` nebo `/akce`, kde to dává smysl.
+  obvod – věcně, ne jen jmenovkou („…i na Praze 13"). Odkaz na `/#program`
+  nebo `/akce`, kde to dává smysl.
 - Nevymýšlej fakta – používej jen tvrzení, která už jsou na webu nebo
   v citovaném zdroji.
 

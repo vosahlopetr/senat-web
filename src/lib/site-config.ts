@@ -19,7 +19,6 @@ export type NavLink = {
 export const NAV_LINKS: readonly NavLink[] = [
   { href: "/o-mne", label: "Kdo jsem" },
   { href: "/#program", label: "Cíle" },
-  { href: "/muj-obvod", label: "Můj obvod", prefetch: false },
   { href: "/aktuality", label: "Aktuality" },
   { href: "/akce", label: "Akce", prefetch: false },
 ];

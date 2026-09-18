@@ -25,7 +25,7 @@ import sitemap from "./sitemap";
 describe("sitemap generator", () => {
   it("generates a comprehensive and valid sitemap", async () => {
     const entries = await sitemap();
-    expect(entries.length).toBe(11); // 9 static routes + 2 mock articles
+    expect(entries.length).toBe(10); // 8 static routes + 2 mock articles
 
     const urls = entries.map((e) => e.url);
 
@@ -33,7 +33,6 @@ describe("sitemap generator", () => {
     expect(urls).toContain("https://www.sablikdosenatu.cz");
     expect(urls).toContain("https://www.sablikdosenatu.cz/cile");
     expect(urls).toContain("https://www.sablikdosenatu.cz/o-mne");
-    expect(urls).toContain("https://www.sablikdosenatu.cz/muj-obvod");
     expect(urls).toContain("https://www.sablikdosenatu.cz/jak-volit");
     expect(urls).toContain("https://www.sablikdosenatu.cz/akce");
     expect(urls).toContain("https://www.sablikdosenatu.cz/aktuality");

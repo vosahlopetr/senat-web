@@ -47,12 +47,7 @@ const STATIC_ROUTES: {
     changeFrequency: "monthly",
     images: ["/images/heroimage.jpg"],
   },
-  {
-    path: "/muj-obvod",
-    sourceFile: "src/app/muj-obvod/page.tsx",
-    priority: 0.8,
-    changeFrequency: "monthly",
-  },
+
   {
     path: "/jak-volit",
     sourceFile: "src/app/jak-volit/page.tsx",
