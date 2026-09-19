@@ -248,55 +248,55 @@ export const EVENTS: readonly CampaignEvent[] = [
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku nebo při procházce v Centrálním parku.",
   },
 
-  // 21. 09. (Po): Tilleho náměstí (2/3)
+  // 21. 09. (Po): Nemocnice Motol
   {
-    id: "stanek-tilleho-namesti-2026-09-21",
+    id: "stanek-motol-2026-09-21",
     date: "2026-09-21",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Tilleho náměstí",
-    place: "Tilleho náměstí, Barrandov, Praha 5",
-    mapUrl: "https://maps.app.goo.gl/23L38en2peWx6LTg7",
+    title: "Stánek – Nemocnice Motol",
+    place: "Zastávka Motol / Nemocnice Motol, Praha 5",
+    mapUrl: "https://maps.app.goo.gl/SZ48rtgbRPkorLkv9",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Tilleho náměstí na Barrandově.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u Nemocnice Motol.",
   },
-  // 22. 09. (Út): Na Knížecí (3/4)
+  // 22. 09. (Út): Hůrka
   {
-    id: "stanek-na-knizeci-2026-09-22",
+    id: "stanek-hurka-2026-09-22",
     date: "2026-09-22",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Na Knížecí",
-    place: "Na Knížecí (Anděl), Praha 5",
-    mapUrl: "https://maps.app.goo.gl/Ep2AQTtk9FVJjqf49",
+    title: "Stánek – Hůrka",
+    place: "Stanice metra Hůrka, Sluneční náměstí, Praha 13",
+    mapUrl: "https://maps.app.goo.gl/M3SA4pX3HEfuLzEb9",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku Na Knížecí.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Hůrka.",
   },
-  // 23. 09. (St): Trnkovo náměstí (1/1)
+  // 23. 09. (St): Klamovka
   {
-    id: "stanek-trnkovo-namesti-2026-09-23",
+    id: "stanek-klamovka-2026-09-23",
     date: "2026-09-23",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Trnkovo náměstí",
-    place: "Trnkovo náměstí, Barrandov, Praha 5",
-    mapUrl: "https://www.google.com/maps/place/50.030615,14.368552",
+    title: "Stánek – Klamovka",
+    place: "Zastávka Klamovka, Plzeňská, Praha 5",
+    mapUrl: "https://www.google.com/maps/search/?api=1&query=Klamovka,+Praha+5",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Trnkově náměstí na Barrandově.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Klamovce.",
   },
-  // 24. 09. (Čt): Lužiny (4/5)
+  // 24. 09. (Čt): Stodůlky
   {
-    id: "stanek-luziny-2026-09-24",
+    id: "stanek-stodulky-2026-09-24",
     date: "2026-09-24",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Lužiny",
-    place: "Stanice metra Lužiny, Praha 13",
-    mapUrl: "https://maps.app.goo.gl/DyAi8wUZ7Abbb6hK9",
+    title: "Stánek – Stodůlky",
+    place: "Stanice metra Stodůlky, Praha 13",
+    mapUrl: "https://maps.app.goo.gl/uQYcQ4oJAuojdYWQ6",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Lužiny.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Stodůlky.",
   },
-  // 25. 09. (Pá): Luka (4/5)
+  // 25. 09. (Pá): Luka
   {
     id: "stanek-luka-2026-09-25",
     date: "2026-09-25",
@@ -308,17 +308,17 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Luka.",
   },
-  // 26. 09. (So): Hůrka (4/5)
+  // 26. 09. (So): Centrální park
   {
-    id: "stanek-hurka-2026-09-26",
+    id: "stanek-centralni-park-2026-09-26",
     date: "2026-09-26",
-    time: "09:30",
-    endTime: "15:00",
-    title: "Stánek – Hůrka",
-    place: "Stanice metra Hůrka, Sluneční náměstí, Praha 13",
-    mapUrl: "https://maps.app.goo.gl/M3SA4pX3HEfuLzEb9",
+    time: "12:00",
+    endTime: "16:00",
+    title: "Stánek a procházka – Centrální park",
+    place: "Centrální park Stodůlky, Praha 13",
+    mapUrl: "https://maps.app.goo.gl/gyfeEkvhBK4SbwJx7",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Hůrka.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku nebo při procházce v Centrálním parku.",
   },
   // 27. 09. (Ne): Jinonice (2/2)
   {
