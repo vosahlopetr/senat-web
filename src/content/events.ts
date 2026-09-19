@@ -248,22 +248,10 @@ export const EVENTS: readonly CampaignEvent[] = [
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku nebo při procházce v Centrálním parku.",
   },
 
-  // 21. 09. (Po): Nemocnice Motol
+  // 21. 09. (Po): Hůrka
   {
-    id: "stanek-motol-2026-09-21",
+    id: "stanek-hurka-2026-09-21",
     date: "2026-09-21",
-    time: "15:30",
-    endTime: "18:00",
-    title: "Stánek – Nemocnice Motol",
-    place: "Zastávka Motol / Nemocnice Motol, Praha 5",
-    mapUrl: "https://maps.app.goo.gl/SZ48rtgbRPkorLkv9",
-    description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u Nemocnice Motol.",
-  },
-  // 22. 09. (Út): Hůrka
-  {
-    id: "stanek-hurka-2026-09-22",
-    date: "2026-09-22",
     time: "15:30",
     endTime: "18:00",
     title: "Stánek – Hůrka",
@@ -271,6 +259,18 @@ export const EVENTS: readonly CampaignEvent[] = [
     mapUrl: "https://maps.app.goo.gl/M3SA4pX3HEfuLzEb9",
     description:
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Hůrka.",
+  },
+  // 22. 09. (Út): Nemocnice Motol
+  {
+    id: "stanek-motol-2026-09-22",
+    date: "2026-09-22",
+    time: "15:30",
+    endTime: "18:00",
+    title: "Stánek – Nemocnice Motol",
+    place: "Zastávka Motol / Nemocnice Motol, Praha 5",
+    mapUrl: "https://maps.app.goo.gl/SZ48rtgbRPkorLkv9",
+    description:
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u Nemocnice Motol.",
   },
   // 23. 09. (St): Klamovka
   {
