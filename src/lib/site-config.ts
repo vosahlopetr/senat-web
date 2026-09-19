@@ -17,7 +17,7 @@ export type NavLink = {
 
 /** Main navigation, shared by Header and Footer (labels are uppercased via CSS). */
 export const NAV_LINKS: readonly NavLink[] = [
-  { href: "/o-mne", label: "Kdo jsem" },
+  { href: "/#kdo-jsem", label: "Kdo jsem" },
   { href: "/#program", label: "Cíle" },
   { href: "/aktuality", label: "Aktuality" },
   { href: "/akce", label: "Akce", prefetch: false },
