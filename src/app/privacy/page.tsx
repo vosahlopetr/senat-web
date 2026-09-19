@@ -19,12 +19,12 @@ export default function PrivacyPage() {
 
         <div className="space-y-6 font-body text-lg md:text-xl font-medium text-[oklch(17.8%_0.01_88.8_/_0.85)]">
           <p>
-            Tým volební kampaně Radka Sáblíka Vám tímto poskytuje informace
-            týkající se zpracování Vašich osobních údajů v souladu s Nařízením
-            Evropského parlamentu a Rady (EU) č. 2016/679, o ochraně fyzických
-            osob v souvislosti se zpracováním osobních údajů a o volném pohybu
-            těchto údajů a o zrušení směrnice 95/46/ES (obecné nařízení o
-            ochraně osobních údajů), (dále jen „GDPR“).
+            Tímto Vám poskytujeme informace týkající se zpracování Vašich
+            osobních údajů v souladu s Nařízením Evropského parlamentu a Rady
+            (EU) č. 2016/679, o ochraně fyzických osob v souvislosti se
+            zpracováním osobních údajů a o volném pohybu těchto údajů a o
+            zrušení směrnice 95/46/ES (obecné nařízení o ochraně osobních
+            údajů), (dále jen „GDPR“).
           </p>
 
           <p>
@@ -37,9 +37,9 @@ export default function PrivacyPage() {
           </h2>
 
           <p>
-            Správcem Vašich osobních údajů je tým volební kampaně Radka Sáblíka.
-            V záležitostech správy Vašich údajů nás můžete kontaktovat
-            prostřednictvím:
+            Správcem Vašich osobních údajů je kandidát do Senátu Parlamentu ČR{" "}
+            <strong>Ing. Radko Sáblík</strong> V záležitostech správy a ochrany
+            Vašich údajů nás můžete kontaktovat prostřednictvím:
           </p>
           <ul className="list-disc pl-8 space-y-2 marker:text-accent">
             <li>
@@ -67,226 +67,218 @@ export default function PrivacyPage() {
           </h2>
 
           <p>
-            Zpracováváme osobní údaje v rámci plnění předmětu naší činnosti v
-            souladu s obecně závaznými právními předpisy. Jedná se zejm. o
-            osobní údaje smluvních partnerů, dárců, dobrovolníků, podporovatelů,
-            odběratelů newsletteru, jakož i dalších osob, které si přejí být v
-            kontaktu s kampaní Radka Sáblíka.
+            Zpracováváme osobní údaje v rámci volební kampaně v souladu s obecně
+            závaznými právními předpisy. Jedná se zejm. o osobní údaje smluvních
+            partnerů, dárců, dobrovolníků, podporovatelů, odběratelů
+            newsletteru, jakož i dalších osob, které vstoupily do kontaktu s
+            kampaní Radka Sáblíka.
           </p>
           <p>Zpracovávanými osobními údaji jsou:</p>
           <ul className="list-disc pl-8 space-y-2 marker:text-accent">
             <li>
-              <strong>základní osobní identifikační údaje:</strong> jméno,
-              příjmení, titul, datum narození, trvalé bydliště, podpis,
+              <strong>základní identifikační údaje:</strong> jméno, příjmení,
+              titul, datum narození, adresa trvalého bydliště, podpis,
             </li>
             <li>
               <strong>kontaktní údaje:</strong> korespondenční adresa, e-mail,
-              telefonní číslo, adresa na sociální síti,
+              telefonní číslo, profil na sociální síti,
             </li>
             <li>
-              <strong>
-                údaje související s plněním smluvního vztahu vč. poskytnutí
-                daru:
-              </strong>{" "}
-              IČO, DIČ, adresa sídla nebo místa podnikání, fakturační adresa,
-              bankovní spojení,
+              <strong>údaje související s financováním kampaně a dary:</strong>{" "}
+              IČO, DIČ, fakturační adresa, číslo bankovního účtu, výše daru a
+              veřejně vykazované údaje podle volebního zákona,
             </li>
             <li>
-              <strong>další osobní údaje</strong>, které nám poskytnete na
-              základě Vašeho souhlasu (např. pro účely zasílání newsletterů v
-              rámci volební kampaně nebo při zapojení do kampaně jako
-              dobrovolník).
+              <strong>další osobní údaje:</strong> údaje, které nám sami
+              poskytnete (např. v registračním formuláři dobrovolníka či
+              přihlášce k odběru newsletteru).
             </li>
           </ul>
           <p>
-            Zpracování Vašich osobních údajů probíhá manuálně, jakož i zcela
-            nebo částečně automatizovaně.
+            Upozorňujeme, že registrace dobrovolníka, podpora či poskytnutí daru
+            mohou vypovídat o Vašich politických názorech (zvláštní kategorie
+            osobních údajů dle čl. 9 GDPR). Tyto údaje zpracováváme s maximálním
+            důrazem na jejich ochranu, a to výhradně na základě Vašeho
+            výslovného souhlasu (čl. 9 odst. 2 písm. a) GDPR) nebo v rámci
+            legitimní politické činnosti (čl. 9 odst. 2 písm. d) GDPR).
+          </p>
+          <p>
+            Zpracování osobních údajů probíhá manuálně i za využití
+            automatizovaných nástrojů.
           </p>
 
           <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] text-accent mt-16 mb-6">
-            III. K jakým účelům zpracováváme Vaše osobní údaje, jaký k tomu máme
-            důvod a jak dlouho Vaše osobní údaje ukládáme?
+            III. K jakým účelům osobní údaje zpracováváme, na jakém právním
+            základě a jak dlouho je uchováváme?
           </h2>
 
           <p>
-            Rozsah zpracování Vašich osobních údajů a lhůta jejich uložení
-            závisí na účelu, pro který jsou zpracovávány, a na právním důvodu
-            jejich zpracování. Vaše osobní údaje zpracováváme vždy jen po dobu
-            nezbytnou pro splnění účelu zpracování. Vaše osobní údaje mohou být
-            následně uloženy po dobu, po kterou takovou povinnost ukládají
-            obecně závazné právní předpisy, nebo po dobu nezbytnou pro hájení
-            našich oprávněných zájmů nebo třetí osoby. Uložení Vašich osobních
-            údajů probíhá vždy v souladu s GDPR a obecně závaznými právními
-            předpisy.
+            Rozsah zpracování a doba uložení údajů vychází z konkrétního účelu
+            zpracování a odpovídajícího právního základu:
           </p>
 
           <h3 className="font-bold text-2xl text-accent mt-10 mb-4">
-            1. Zpracování osobních údajů z důvodu plnění zákonné povinnosti,
-            smluvní povinnosti nebo hájení oprávněných zájmů
+            1. Plnění zákonných povinností, smluv a ochrana oprávněných zájmů
           </h3>
           <p>
-            Zpracováváme Vaše osobní údaje z důvodu plnění povinností, které nám
-            ukládají obecně závazné právní předpisy. Může se jednat o povinnosti
-            stanovené volebními zákony, účetními a daňovými zákony, aj.
+            Osobní údaje dárců a smluvních partnerů zpracováváme za účelem
+            plnění povinností uložených volebními zákony (zejm. zákonem č.
+            247/1995 Sb., o volbách do Parlamentu ČR), daňovými a účetními
+            předpisy, a dále pro plnění darovacích a jiných smluv (čl. 6 odst. 1
+            písm. b) a c) GDPR). Údaje můžeme zpracovávat i pro účely ochrany
+            našich právních nároků (oprávněný zájem dle čl. 6 odst. 1 písm. f)
+            GDPR).
           </p>
           <p>
-            Pokud jste s námi uzavřel(a) smlouvu (darovací, dobrovolnickou aj.),
-            zpracováváme Vaše osobní údaje z důvodu naplnění účelu takové
-            smlouvy.
-          </p>
-          <p>
-            Zpracováváme Vaše osobní údaje také v tom případě, že je jejich
-            zpracování nezbytné z důvodu našich oprávněných zájmů či třetí
-            strany nebo k výkonu práv, které nám přiznávají obecně závazné
-            právní předpisy.
+            <strong>Doba uložení:</strong> Údaje o poskytnutých darech a účetní
+            doklady uchováváme po dobu stanovenou právními předpisy (zpravidla 5
+            až 10 let dle příslušných zákonů a požadavků dohledu Úřadu pro
+            dohled nad hospodařením politických stran a politických hnutí).
           </p>
 
           <h3 className="font-bold text-2xl text-accent mt-10 mb-4">
-            2. Zpracování osobních údajů z důvodu Vaší registrace jako
-            podporovatel či dobrovolník
+            2. Zapojení podporovatelů a dobrovolníků
           </h3>
           <p>
-            Pokud jste se registroval(a) jako podporovatel nebo dobrovolník
-            volební kampaně Radka Sáblíka, zpracováváme Vaše osobní údaje za
-            účelem:
+            Pokud se zapojíte jako dobrovolník či podporovatel, zpracováváme
+            Vaše identifikační a kontaktní údaje za účelem koordinace aktivit,
+            komunikace a Vašeho zapojení do kampaně.
+          </p>
+          <p>
+            Právním základem pro toto zpracování je realizace dobrovolnické
+            spolupráce (čl. 6 odst. 1 písm. b) GDPR), oprávněný zájem správce na
+            efektivním vedení kampaně (čl. 6 odst. 1 písm. f) GDPR) a Váš
+            výslovný souhlas udělený při registraci (čl. 6 odst. 1 písm. a) a
+            čl. 9 odst. 2 písm. a) GDPR).
+          </p>
+          <p>
+            <strong>Doba uložení:</strong> Údaje uchováváme po dobu trvání
+            volební kampaně a nejdéle 6 měsíců po jejím skončení za účelem
+            jejího organizačního vypořádání, případně do okamžiku, kdy požádáte
+            o ukončení spolupráce či odvoláte udělený souhlas.
+          </p>
+
+          <h3 className="font-bold text-2xl text-accent mt-10 mb-4">
+            3. Zasílání novinek a newsletterů (souhlas se zpracováním)
+          </h3>
+          <p>
+            Přihlásíte-li se k odběru novinek nebo nám udělíte souhlas se
+            zasíláním informací e-mailem, zpracováváme Vaši e-mailovou adresu na
+            základě Vašeho dobrovolného souhlasu (čl. 6 odst. 1 písm. a) GDPR).
+          </p>
+          <p>
+            Svůj souhlas můžete kdykoli bezplatně odvolat prostřednictvím odkazů
+            v patičce každého doručeného e-mailu nebo zprávou na{" "}
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="text-accent underline underline-offset-4 hover:opacity-80 transition-opacity"
+            >
+              {CONTACT_EMAIL}
+            </a>
+            . Odvoláním souhlasu není dotčena zákonnost zpracování před jeho
+            odvoláním.
+          </p>
+          <p>
+            <strong>Doba uložení:</strong> Údaje uchováváme do odhlášení odběru,
+            odvolání souhlasu nebo do ukončení volební kampaně.
+          </p>
+
+          <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] text-accent mt-16 mb-6">
+            IV. Komu předáváme Vaše osobní údaje a předávání do zahraničí
+          </h2>
+
+          <p>
+            K Vašim osobním údajům mají přístup pověření členové volebního týmu
+            vázaní mlčenlivostí a prověření smluvní zpracovatelé:
           </p>
           <ul className="list-disc pl-8 space-y-2 marker:text-accent">
             <li>
-              zajištění Vašeho optimálního zapojení se do volební kampaně a
-              souvisejících akcí,
+              <strong>Rozesílání e-mailů:</strong> Využíváme platformu Resend
+              (společnost Plus Five Five, Inc., USA). Pro tento účel je
+              zpracovávána Vaše e-mailová adresa.
             </li>
-            <li>koordinace dobrovolnických aktivit a komunikace s Vámi.</li>
+            <li>
+              <strong>Hosting a infrastruktura webu:</strong> Provoz a měření
+              agregovaného výkonu zajišťuje služba Vercel (společnost Vercel
+              Inc., USA).
+            </li>
           </ul>
           <p>
-            Právním důvodem pro zpracování Vašich osobních údajů o jménu,
-            příjmení, místu bydliště a e-mailové adrese (vč. dalších kontaktních
-            údajů) je skutečnost, že jste naším podporovatelem či dobrovolníkem.
-            Po dobu, po kterou budete zapojeni do kampaně, souhlasíte fakticky
-            se zpracováním těchto svých osobních údajů uvedenými způsoby. Ve
-            zbývajícím rozsahu je právním důvodem zpracování Vašich osobních
-            údajů pro uvedené účely Váš výslovný souhlas.
-          </p>
-
-          <h3 className="font-bold text-2xl text-accent mt-10 mb-4">
-            3. Zpracování osobních údajů na základě Vašeho souhlasu
-          </h3>
-          <p>
-            Pokud jste nám udělil(a) souhlas se zpracováním Vašich osobních
-            údajů, zpracováváme Vaše osobní údaje pro konkrétní účel nebo účely,
-            se kterým(i) jste souhlasil(a).
+            Vzhledem k tomu, že výše uvedené společnosti sídlí v USA, dochází k
+            předávání osobních údajů do třetí země. Předávání probíhá plně v
+            souladu s kapitolou V GDPR na základě rozhodnutí Evropské komise o
+            odpovídající ochraně (rámec EU-US Data Privacy Framework) a
+            standardních smluvních doložek (SCC) schválených Evropskou komisí.
           </p>
           <p>
-            Může se jednat např. o zasílání informací a novinek prostřednictvím
-            SMS zpráv nebo e-mailem (např. newslettery z volební kampaně) či o
-            marketingové účely.
-          </p>
-          <p>
-            Pokud je zpracování Vašich osobních údajů založeno na Vašem
-            dobrovolném souhlasu, máte právo svůj souhlas kdykoli odvolat.
-          </p>
-          <p>
-            Odvoláním souhlasu není dotčena zákonnost zpracování vycházejícího
-            ze souhlasu, který byl dán před jeho odvoláním, ani zákonnost
-            zpracování založená jiným právním důvodem než je Váš dobrovolný
-            souhlas.
+            V případech stanovených zákonem předáváme osobní údaje také orgánům
+            veřejné moci (např. Úřad pro dohled nad hospodařením politických
+            stran a politických hnutí, finanční úřady).
           </p>
 
           <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] text-accent mt-16 mb-6">
-            IV. Komu předáváme Vaše osobní údaje?
+            V. Soubory cookies a analytika
           </h2>
 
-          <p>
-            Zpracování osobních údajů je zajišťováno pověřenými členy týmu
-            volební kampaně Radka Sáblíka i externími osobami, které pro nás
-            vykonávají činnosti související se zajištěním chodu kampaně.
-          </p>
-          <p>
-            K e-mailovému rozesílání informací a novinek využíváme různé
-            nástroje. V případě této webové stránky a kampaně využíváme
-            platformu Resend (spravovanou společností Plus Five Five, Inc.). V
-            případě, že jste příjemcem e-mailových informací a novinek,
-            předáváme této společnosti za uvedeným účelem Váš elektronický
-            kontakt (Vaši e-mailovou adresu).
-          </p>
-          <p>
-            Pro měření návštěvnosti a výkonu webu využíváme služby Vercel
-            Analytics a Vercel Speed Insights (spravované společností Vercel
-            Inc.). Tyto nástroje nám pomáhají pochopit, jak je web využíván, a
-            zlepšovat jeho rychlost a dostupnost. Zpracovávaná data jsou
-            agregovaná a nejsou využívána k reklamním účelům.
-          </p>
-          <p>
-            Pokud dochází ke zpracování Vašich osobních údajů externími osobami,
-            jsou tito zpracovatelé oprávněni zpracovávat Vaše údaje pouze v
-            rámci našich pokynů a k účelům, k nimž jsme oprávněni Vaše údaje
-            zpracovávat my. Jinými způsoby nebo k jiným účelům nejsou externí
-            osoby oprávněny Vaše údaje využít.
-          </p>
-          <p>
-            K předávání Vašich osobních údajů dochází také v rámci plnění
-            povinností, které nám ukládají obecně závazné právní předpisy, a to
-            úřadům nebo orgánům uvedeným v těchto předpisech.
-          </p>
+          <p>Na našich webových stránkách dbáme na ochranu Vašeho soukromí:</p>
+          <ul className="list-disc pl-8 space-y-2 marker:text-accent">
+            <li>
+              <strong>Technické cookies:</strong> Nezbytné pro správné zobrazení
+              a bezpečnost webu. Tyto cookies využíváme na základě oprávněného
+              zájmu.
+            </li>
+            <li>
+              <strong>Analytika návštěvnosti:</strong> Používáme Vercel
+              Analytics a Vercel Speed Insights pro sledování technického výkonu
+              webu. Tato řešení pracují výhradně s agregovanými a
+              anonymizovanými daty a neslouží k identifikaci konkrétních
+              návštěvníků.
+            </li>
+            <li>
+              <strong>Marketingové a sledovací cookies:</strong> Na tomto webu{" "}
+              <strong>nepoužíváme</strong> žádné marketingové ani profilovací
+              cookies třetích stran.
+            </li>
+          </ul>
 
           <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] text-accent mt-16 mb-6">
-            V. Soubory cookies a data z webu
+            VI. Jaká máte práva v souvislosti se zpracováním?
           </h2>
 
-          <p>
-            Při vstupu na naše webové stránky jsou shromažďována data pro
-            statistické účely, zejm. pro sledování aktivity uživatelů našich
-            webových stránek a jejich zájem o jednotlivé podstránky. Data mohou
-            obsahovat anonymizované síťové identifikátory, datum a čas návštěvy
-            a konkrétní URL adresu, na níž jste se připojili. Všechna takto
-            získaná data využíváme výhradně ke zlepšování našich stránek a
-            nejsou využívána pro reklamní účely.
-          </p>
-          <p>
-            Naše webové stránky mohou používat soubory cookies a podobné
-            technologie. Technické cookies jsou nezbytné pro správné fungování
-            webu a zpracováváme je v souladu s GDPR vždy. Analytické údaje
-            získáváme prostřednictvím služby Vercel Analytics za účelem
-            zlepšování webu; tato služba pracuje s agregovanými údaji o
-            návštěvnosti a nevyužívá je k cílení reklam. Nastavení cookies
-            můžete kdykoliv upravit v prohlížeči.
-          </p>
-          <p>Marketingové cookies na tomto webu nepoužíváme.</p>
-
-          <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] text-accent mt-16 mb-6">
-            VI. Jaká máte práva v souvislosti se zpracováním Vašich osobních
-            údajů?
-          </h2>
-
-          <p>V souvislosti se zpracováním Vašich osobních údajů máte právo:</p>
+          <p>Dle GDPR máte právo:</p>
           <ul className="list-disc pl-8 space-y-2 marker:text-accent mb-6">
-            <li>na přístup ke svým osobním údajům,</li>
-            <li>na jejich opravu a výmaz,</li>
-            <li>na omezení zpracování,</li>
+            <li>požadovat přístup k Vašim zpracovávaným osobním údajům,</li>
+            <li>požadovat opravu nepřesných či doplnění neúplných údajů,</li>
+            <li>požadovat výmaz osobních údajů („právo být zapomenut“),</li>
+            <li>požadovat omezení zpracování údajů,</li>
             <li>
-              na oznámení správce ohledně opravy, výmazu nebo omezení zpracování
-              osobních údajů,
-            </li>
-            <li>na přenositelnost údajů,</li>
-            <li>vznést námitku proti zpracování,</li>
-            <li>
-              nebýt předmětem žádného rozhodnutí založeného výhradně na
-              automatizovaném zpracování, včetně profilování,
+              na přenositelnost údajů k jinému správci ve strukturovaném
+              formátu,
             </li>
             <li>
-              podat stížnost u Úřadu pro ochranu osobních údajů jakožto
-              dozorového orgánu.
+              <strong>vznést námitku</strong> proti zpracování založenému na
+              oprávněném zájmu,
+            </li>
+            <li>kdykoli odvolat udělený souhlas bez jakýchkoli sankcí,</li>
+            <li>
+              nebýt předmětem automatizovaného individuálního rozhodování ani
+              profilování,
+            </li>
+            <li>
+              podat stížnost u dozorového úřadu, kterým je{" "}
+              <strong>Úřad pro ochranu osobních údajů</strong> (Pplk. Sochora
+              27, 170 00 Praha 7, web:{" "}
+              <a
+                href="https://www.uoou.gov.cz"
+                target="_blank"
+                rel="noopener noreferrer" // doporučeno přidat noopener společně s noreferrer
+                className="underline underline-offset-4 hover:opacity-80"
+              >
+                www.uoou.gov.cz
+              </a>
+              ).
             </li>
           </ul>
-          <p>
-            To vše za podmínek stanovených GDPR a obecně závaznými právními
-            předpisy.
-          </p>
-          <p>
-            V případě zpracování založeného na Vašem dobrovolném souhlasu máte
-            právo tento souhlas kdykoli odvolat, čímž však není dotčena
-            zákonnost zpracování založená na souhlasu uděleném před jeho
-            odvoláním.
-          </p>
         </div>
       </div>
     </main>
