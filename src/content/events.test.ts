@@ -99,8 +99,8 @@ describe("googleCalendarUrl", () => {
 });
 
 describe("campaign schedule integrity", () => {
-  it("contains 46 scheduled events", () => {
-    expect(EVENTS.length).toBe(46);
+  it("contains 45 scheduled events", () => {
+    expect(EVENTS.length).toBe(45);
   });
 
   it("ensures every event has a unique ID and valid date format", () => {

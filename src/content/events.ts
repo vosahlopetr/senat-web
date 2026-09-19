@@ -247,18 +247,7 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku nebo při procházce v Centrálním parku.",
   },
-  // 20. 09. (Ne): Smíchov a Plzeňská
-  {
-    id: "stanek-smichov-plzenska-2026-09-20",
-    date: "2026-09-20",
-    time: "09:30",
-    endTime: "12:00",
-    title: "Kontaktní kampaň – Smíchov a Plzeňská",
-    place: "Smíchov a Plzeňská ulice, Praha 5",
-    mapUrl: "https://maps.app.goo.gl/qQWd6Knpan6dNvss5",
-    description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty při kontaktní kampani na Smíchově a podél Plzeňské ulice.",
-  },
+
   // 21. 09. (Po): Tilleho náměstí (2/3)
   {
     id: "stanek-tilleho-namesti-2026-09-21",
