@@ -5,6 +5,7 @@ import {
   getEventById,
   getEventCategory,
   getEventDateParts,
+  getEventIsoBounds,
   getMaxVisibleDateString,
   getPragueDateString,
   getPublicEventById,
@@ -28,6 +29,16 @@ const allDayEvent: CampaignEvent = {
   date: "2026-09-30",
   title: "Debata ve Stodůlkách",
   place: "KD Mlejn, Praha 13",
+};
+
+const nightEvent: CampaignEvent = {
+  id: "studentsky-volebni-stab-2026-10-10",
+  date: "2026-10-10",
+  time: "19:30",
+  endTime: "01:00",
+  title: "První studentský volební štáb v historii ČR?!",
+  place: "Phenomen, Nádražní 84, Praha 5",
+  alwaysVisible: true,
 };
 
 describe("buildEventIcs", () => {
@@ -76,6 +87,12 @@ describe("buildEventIcs", () => {
     expect(ics.endsWith("\r\n")).toBe(true);
     expect(ics).not.toMatch(/[^\r]\n/);
   });
+
+  it("rolls an event ending after midnight into the next day", () => {
+    const ics = buildEventIcs(nightEvent);
+    expect(ics).toContain("DTSTART;TZID=Europe/Prague:20261010T193000");
+    expect(ics).toContain("DTEND;TZID=Europe/Prague:20261011T010000");
+  });
 });
 
 describe("googleCalendarUrl", () => {
@@ -96,11 +113,34 @@ describe("googleCalendarUrl", () => {
     const url = new URL(googleCalendarUrl(allDayEvent));
     expect(url.searchParams.get("dates")).toBe("20260930/20261001");
   });
+
+  it("encodes overnight events with the end on the following day", () => {
+    const url = new URL(googleCalendarUrl(nightEvent));
+    expect(url.searchParams.get("dates")).toBe(
+      "20261010T193000/20261011T010000",
+    );
+  });
+});
+
+describe("getEventIsoBounds", () => {
+  it("keeps the end on the same day for a regular timed event", () => {
+    expect(getEventIsoBounds(timedEvent)).toEqual({
+      startDate: "2026-09-12T10:00:00+02:00",
+      endDate: "2026-09-12T12:00:00+02:00",
+    });
+  });
+
+  it("puts the end on the next day for an overnight event", () => {
+    expect(getEventIsoBounds(nightEvent)).toEqual({
+      startDate: "2026-10-10T19:30:00+02:00",
+      endDate: "2026-10-11T01:00:00+02:00",
+    });
+  });
 });
 
 describe("campaign schedule integrity", () => {
-  it("contains 45 scheduled events", () => {
-    expect(EVENTS.length).toBe(45);
+  it("contains 46 scheduled events", () => {
+    expect(EVENTS.length).toBe(46);
   });
 
   it("ensures every event has a unique ID and valid date format", () => {
@@ -141,11 +181,26 @@ describe("7-day visibility and leak prevention", () => {
     expect(dates).not.toContain("2026-09-15");
     expect(dates).not.toContain("2026-10-09");
 
-    // All visible events must be between 2026-09-02 and 2026-09-09
+    // All visible events must be between 2026-09-02 and 2026-09-09 – except
+    // public invitations (alwaysVisible), which are published in advance.
     for (const event of visible) {
+      if (event.alwaysVisible) continue;
       expect(event.date >= "2026-09-02").toBe(true);
       expect(event.date <= "2026-09-09").toBe(true);
     }
+  });
+
+  it("publishes alwaysVisible invitations beyond the 7-day window", () => {
+    const nowMs = new Date("2026-09-02T12:00:00+02:00").getTime();
+    const dates = upcomingEvents(nowMs).map((e) => e.date);
+    expect(dates).toContain("2026-10-10");
+
+    const invitation = getPublicEventById(
+      "studentsky-volebni-stab-2026-10-10",
+      nowMs,
+    );
+    expect(invitation).toBeDefined();
+    expect(invitation?.alwaysVisible).toBe(true);
   });
 
   it("getPublicEventById returns an event within the 7-day window, but rejects future events", () => {
@@ -213,5 +268,13 @@ describe("getEventDateParts and getEventCategory helpers", () => {
     const catElection1 = getEventCategory(electionRound1);
     expect(catElection1.isElection).toBe(true);
     expect(catElection1.badge).toBe("1. kolo voleb");
+
+    const staff = EVENTS.find(
+      (e) => e.id === "studentsky-volebni-stab-2026-10-10",
+    )!;
+    const catStaff = getEventCategory(staff);
+    expect(catStaff.badge).toBe("Studentský volební štáb");
+    expect(catStaff.district).toBe("Praha 5");
+    expect(catStaff.isSpecial).toBe(true);
   });
 });

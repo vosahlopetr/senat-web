@@ -26,6 +26,11 @@ export type CampaignEvent = {
   /** Optional link to map/photo of exact location (e.g. Google Drive). */
   mapUrl?: string;
   description?: string;
+  /**
+   * Public invitation events (e.g. an open election-night party) that may be
+   * published far in advance – exempt from the 7-day visibility window.
+   */
+  alwaysVisible?: boolean;
 };
 
 export const EVENT_VISIBILITY_WINDOW_DAYS = 7;
@@ -486,6 +491,18 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Druhý volební den 1. kola senátních voleb. Hlasovat můžete do 14:00, poté začíná sčítání hlasů.",
   },
+  // 10. 10. (So): První studentský volební štáb (večer po 1. kole voleb)
+  {
+    id: "studentsky-volebni-stab-2026-10-10",
+    date: "2026-10-10",
+    time: "19:30",
+    endTime: "01:00",
+    title: "První studentský volební štáb v historii ČR?!",
+    place: "Phenomen, Nádražní 84, Praha 5",
+    alwaysVisible: true,
+    description:
+      "Open DOORS od 19:30. Ve 20:00 oficiální začátek programu a slovo kandidáta do Senátu PČR, pana ředitele Ing. Radka Sáblíka, ve 20:10 slovo studentů k programu večera, od 20:15 pub kvíz s několika okruhy o ceny a od 20:45 diskotéka – každou celou hodinu 2 minuty komentování sčítání výsledků senátních voleb. Ochutnejte naše speciální drinky: True Blue, Virgin Blue a Sáblobomba. Budeme se na Vás těšit!",
+  },
   // 11. 10. (Ne): Lužiny (2. kolo)
   {
     id: "stanek-2kolo-luziny-2026-10-11",
@@ -659,6 +676,7 @@ export function getEventCategory(event: CampaignEvent): EventCategory {
     event.title.toLowerCase().includes("minigolf") ||
     event.id.includes("minigolf");
   const isSecondRound = event.id.includes("2kolo");
+  const isElectionStaff = event.id.startsWith("studentsky-volebni-stab");
 
   let badge = "Kontaktní stánek";
   if (isElection) {
@@ -670,6 +688,8 @@ export function getEventCategory(event: CampaignEvent): EventCategory {
     badge = "Hospodský kvíz & soutěž";
   } else if (isMinigolf) {
     badge = "Sváteční minigolf";
+  } else if (isElectionStaff) {
+    badge = "Studentský volební štáb";
   } else if (isSecondRound) {
     badge = "Kontaktní stánek (před 2. kolem)";
   }
@@ -684,7 +704,7 @@ export function getEventCategory(event: CampaignEvent): EventCategory {
   return {
     badge,
     district,
-    isSpecial: isQuiz || isMinigolf,
+    isSpecial: isQuiz || isMinigolf || isElectionStaff,
     isElection,
   };
 }
@@ -726,7 +746,8 @@ export function upcomingEvents(
   return EVENTS.filter((event) => {
     const eventEndOfDay = new Date(`${event.date}T23:59:59+02:00`).getTime();
     const hasNotPassed = eventEndOfDay >= nowMs;
-    const isWithinWindow = event.date <= maxVisibleDate;
+    const isWithinWindow =
+      event.alwaysVisible === true || event.date <= maxVisibleDate;
     return hasNotPassed && isWithinWindow;
   });
 }
@@ -763,6 +784,31 @@ export function getPublicEventById(
 
 const DEFAULT_DURATION_MINUTES = 120;
 
+/** "HH:MM" → minutes since midnight. */
+function toMinutes(time: string): number {
+  const [hours, minutes] = time.split(":").map(Number);
+  return hours * 60 + minutes;
+}
+
+/** Minutes since midnight → "HH:MM" (wraps at midnight). */
+function toTimeString(totalMinutes: number): string {
+  const pad = (value: number) => String(value).padStart(2, "0");
+  return `${pad(Math.floor(totalMinutes / 60) % 24)}:${pad(totalMinutes % 60)}`;
+}
+
+/** Shifts a compact "YYYYMMDD" date string by one day. */
+function nextCalendarDay(date: string): string {
+  const shifted = new Date(
+    Date.UTC(
+      Number(date.slice(0, 4)),
+      Number(date.slice(4, 6)) - 1,
+      Number(date.slice(6, 8)),
+    ),
+  );
+  shifted.setUTCDate(shifted.getUTCDate() + 1);
+  return shifted.toISOString().slice(0, 10).replaceAll("-", "");
+}
+
 function parseTimeParts(event: CampaignEvent): {
   start: string;
   end: string;
@@ -770,15 +816,45 @@ function parseTimeParts(event: CampaignEvent): {
   if (!event.time) return null;
   const date = event.date.replaceAll("-", "");
   const start = `${date}T${event.time.replace(":", "")}00`;
-  if (event.endTime) {
-    return { start, end: `${date}T${event.endTime.replace(":", "")}00` };
+
+  const startMinutes = toMinutes(event.time);
+  const endTime =
+    event.endTime ?? toTimeString(startMinutes + DEFAULT_DURATION_MINUTES);
+  // An event ending before its start time (e.g. a party until 01:00) runs
+  // past midnight and therefore ends on the following day.
+  const endDate =
+    toMinutes(endTime) < startMinutes ? nextCalendarDay(date) : date;
+
+  return { start, end: `${endDate}T${endTime.replace(":", "")}00` };
+}
+
+/** Formats a compact ICS timestamp ("YYYYMMDDTHHMMSS") as ISO 8601 in Prague time. */
+function compactToIso(compact: string): string {
+  const [date, time] = compact.split("T");
+  return `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6, 8)}T${time.slice(0, 2)}:${time.slice(2, 4)}:${time.slice(4, 6)}+02:00`;
+}
+
+/**
+ * ISO 8601 start/end bounds for JSON-LD, using the same overnight-aware
+ * logic as the ICS and Google Calendar links.
+ */
+export function getEventIsoBounds(event: CampaignEvent): {
+  startDate: string;
+  endDate: string;
+} {
+  const timed = parseTimeParts(event);
+  if (timed) {
+    return {
+      startDate: compactToIso(timed.start),
+      endDate: compactToIso(timed.end),
+    };
   }
-  const [hours, minutes] = event.time.split(":").map(Number);
-  const endTotal = hours * 60 + minutes + DEFAULT_DURATION_MINUTES;
-  const endHours = Math.floor(endTotal / 60) % 24;
-  const endMinutes = endTotal % 60;
-  const pad = (value: number) => String(value).padStart(2, "0");
-  return { start, end: `${date}T${pad(endHours)}${pad(endMinutes)}00` };
+  const next = new Date(`${event.date}T12:00:00+02:00`);
+  next.setDate(next.getDate() + 1);
+  return {
+    startDate: `${event.date}T00:00:00+02:00`,
+    endDate: `${next.toISOString().slice(0, 10)}T00:00:00+02:00`,
+  };
 }
 
 /** All-day events span a single day (DTEND is exclusive). */

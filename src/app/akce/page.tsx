@@ -7,6 +7,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import { CONTACT_EMAIL, SITE_URL, VOLUNTEER_URL } from "@/lib/site-config";
 import {
   getEventDateParts,
+  getEventIsoBounds,
   getUpcomingEventsForNow,
   googleCalendarUrl,
 } from "@/content/events";
@@ -47,29 +48,32 @@ async function UpcomingEventsSection() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": upcoming.map((event) => ({
-      "@type": "Event",
-      name: event.title,
-      startDate: `${event.date}T${event.time ?? "15:30"}:00+02:00`,
-      endDate: `${event.date}T${event.endTime ?? "18:00"}:00+02:00`,
-      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-      eventStatus: "https://schema.org/EventScheduled",
-      location: {
-        "@type": "Place",
-        name: event.place,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Praha",
-          addressCountry: "CZ",
+    "@graph": upcoming.map((event) => {
+      const { startDate, endDate } = getEventIsoBounds(event);
+      return {
+        "@type": "Event",
+        name: event.title,
+        startDate,
+        endDate,
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        eventStatus: "https://schema.org/EventScheduled",
+        location: {
+          "@type": "Place",
+          name: event.place,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Praha",
+            addressCountry: "CZ",
+          },
         },
-      },
-      organizer: {
-        "@type": "Person",
-        name: "Radko Sáblík",
-        url: SITE_URL,
-      },
-      description: event.description ?? event.title,
-    })),
+        organizer: {
+          "@type": "Person",
+          name: "Radko Sáblík",
+          url: SITE_URL,
+        },
+        description: event.description ?? event.title,
+      };
+    }),
   };
 
   if (upcoming.length === 0) {
