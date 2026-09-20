@@ -10,7 +10,10 @@ type DistrictPinModalProps = {
   onClose: () => void;
 };
 
-export default function DistrictPinModal({ pin, onClose }: DistrictPinModalProps) {
+export default function DistrictPinModal({
+  pin,
+  onClose,
+}: DistrictPinModalProps) {
   const { dialogRef, setOpen, close, handleBackdropClick } = useDialog({
     onClose,
   });

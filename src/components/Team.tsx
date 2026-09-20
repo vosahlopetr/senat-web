@@ -64,14 +64,13 @@ export default function Team() {
               První studentská kampaň
             </h2>
             <p className="font-body font-bold text-[clamp(1.125rem,2vw,1.45rem)] leading-[1.4] text-accent mb-0 max-w-[44rem]">
-              Žádná najatá agentura. Tuto kampaň jsme iniciovali a vedeme pouze my,
-              studenti Smíchovské střední. Děláme to ve
-              volném čase, bez nároku na jakoukoli kompenzaci a z hlubokého osobního
-              přesvědčení, že Radko Sáblík patří do Senátu.
+              Žádná najatá agentura. Tuto kampaň jsme iniciovali a vedeme pouze
+              my, studenti Smíchovské střední. Děláme to ve volném čase, bez
+              nároku na jakoukoli kompenzaci a z hlubokého osobního přesvědčení,
+              že Radko Sáblík patří do Senátu.
             </p>
           </div>
 
-         
           <div className="relative block w-full rounded-[32px] border-[3px] border-accent shadow-[-3px_3px_0px_var(--color-accent)] mb-8 overflow-hidden">
             <Image
               src={teamPhoto}
