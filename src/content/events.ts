@@ -277,17 +277,17 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Kavalírce.",
   },
-  // 23. 09. (St): Klamovka
+  // 23. 09. (St): Kavalírka
   {
-    id: "stanek-klamovka-2026-09-23",
+    id: "stanek-kavalirka-2026-09-23",
     date: "2026-09-23",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Klamovka",
-    place: "Zastávka Klamovka, Plzeňská, Praha 5",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Klamovka,+Praha+5",
+    title: "Stánek – Kavalírka",
+    place: "Zastávka Kavalírka, Plzeňská, Praha 5",
+    mapUrl: "https://maps.app.goo.gl/6BJMBPQmE9HVh2YRA",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Klamovce.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Kavalírce.",
   },
   // 24. 09. (Čt): Stodůlky
   {
@@ -337,46 +337,35 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Sváteční setkání s Radkem Sáblíkem a studenty a studenty a minigolf v Centrálním parku (Svatováclavský den). Přijďte si zahrát, dát kávu a popovídat si.",
   },
-  // 29. 09. (Út): Nové Butovice (4/4)
+  // 29. 09. (Út): Malvazinky + Jinonice
   {
-    id: "stanek-nove-butovice-2026-09-29",
+    id: "stanek-malvazinky-jinonice-2026-09-29",
     date: "2026-09-29",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Nové Butovice",
-    place: "Stanice metra Nové Butovice, Praha 13",
-    mapUrl: "https://maps.app.goo.gl/2eshFVsEefqeTgJR6",
+    title: "Stánek – Malvazinky + Jinonice",
+    place: "Malvazinky a Jinonice, Praha 5",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Malvazinky,+Praha+5",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Nové Butovice.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našich stánků na Malvazinkách a v Jinonicích.",
   },
-  // 30. 09. (St): Kavalírka (1/1)
+  // 30. 09. (St): Klamovka
   {
-    id: "stanek-kavalirka-2026-09-30",
+    id: "stanek-klamovka-2026-09-30",
     date: "2026-09-30",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Kavalírka",
-    place: "Zastávka Kavalírka, Plzeňská, Praha 5",
-    mapUrl: "https://maps.app.goo.gl/6BJMBPQmE9HVh2YRA",
+    title: "Stánek – Klamovka",
+    place: "Zastávka Klamovka, Plzeňská, Praha 5",
+    mapUrl: "https://www.google.com/maps/search/?api=1&query=Klamovka,+Praha+5",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Kavalírce.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Klamovce.",
   },
-  // 01. 10. (Čt): Motol (2/2)
+  // 01. 10. (Čt): Na Knížecí (4/4)
   {
-    id: "stanek-motol-2026-10-01",
+    id: "stanek-na-knizeci-2026-10-01",
     date: "2026-10-01",
-    time: "15:30",
-    endTime: "18:00",
-    title: "Stánek – Motol",
-    place: "Zastávka Motol / Nemocnice Motol, Praha 5",
-    mapUrl: "https://maps.app.goo.gl/SZ48rtgbRPkorLkv9",
-    description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku v Motole.",
-  },
-  // 02. 10. (Pá): Na Knížecí (4/4)
-  {
-    id: "stanek-na-knizeci-2026-10-02",
-    date: "2026-10-02",
     time: "15:30",
     endTime: "18:00",
     title: "Stánek – Na Knížecí",
@@ -384,6 +373,19 @@ export const EVENTS: readonly CampaignEvent[] = [
     mapUrl: "https://maps.app.goo.gl/Ep2AQTtk9FVJjqf49",
     description:
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku Na Knížecí.",
+  },
+  // 02. 10. (Pá): Trnkovo náměstí / Chaplinovo náměstí
+  {
+    id: "stanek-trnkovo-chaplinovo-2026-10-02",
+    date: "2026-10-02",
+    time: "15:30",
+    endTime: "18:00",
+    title: "Stánek – Trnkovo náměstí / Chaplinovo náměstí",
+    place: "Trnkovo náměstí a Chaplinovo náměstí, Praha 5",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Trnkovo+náměstí,+Praha+5",
+    description:
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našich stánků na Trnkově a Chaplinově náměstí.",
   },
   // 03. 10. (So): Centrální park (2/2) + minigolf
   {
