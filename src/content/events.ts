@@ -265,17 +265,17 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Hůrka.",
   },
-  // 22. 09. (Út): Nemocnice Motol
+  // 22. 09. (Út): Kavalírka
   {
-    id: "stanek-motol-2026-09-22",
+    id: "stanek-kavalirka-2026-09-22",
     date: "2026-09-22",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Nemocnice Motol",
-    place: "Zastávka Motol / Nemocnice Motol, Praha 5",
-    mapUrl: "https://maps.app.goo.gl/SZ48rtgbRPkorLkv9",
+    title: "Stánek – Kavalírka",
+    place: "Zastávka Kavalírka, Plzeňská, Praha 5",
+    mapUrl: "https://maps.app.goo.gl/6BJMBPQmE9HVh2YRA",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u Nemocnice Motol.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Kavalírce.",
   },
   // 23. 09. (St): Klamovka
   {
@@ -324,18 +324,6 @@ export const EVENTS: readonly CampaignEvent[] = [
     mapUrl: "https://maps.app.goo.gl/gyfeEkvhBK4SbwJx7",
     description:
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku nebo při procházce v Centrálním parku.",
-  },
-  // 27. 09. (Ne): Jinonice (2/2)
-  {
-    id: "stanek-jinonice-2026-09-27",
-    date: "2026-09-27",
-    time: "09:30",
-    endTime: "15:00",
-    title: "Stánek – Jinonice",
-    place: "Stanice metra Jinonice, Praha 5",
-    mapUrl: "https://maps.app.goo.gl/zAXWhRczNPtGVZsMA",
-    description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Jinonice.",
   },
   // 28. 09. (Po): Centrální park (1/2) - STÁTNÍ SVÁTEK + minigolf
   {
