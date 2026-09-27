@@ -333,7 +333,7 @@ export const EVENTS: readonly CampaignEvent[] = [
     endTime: "18:00",
     title: "Kontaktní kampaň a minigolf – Centrální park (státní svátek)",
     place: "Centrální park na Praze 13, u minigolfu",
-    mapUrl: "https://maps.app.goo.gl/wugiUhMTsS5ZwEpW8",
+    mapUrl: "https://maps.app.goo.gl/7xKYK8NWnReFFxUg9",
     description:
       "Sváteční setkání s Radkem Sáblíkem a studenty a minigolf v Centrálním parku (Svatováclavský den). Přijďte si zahrát a popovídat si.",
   },
@@ -359,7 +359,7 @@ export const EVENTS: readonly CampaignEvent[] = [
     place: "Stanice metra Jinonice, Praha 5",
     mapUrl: "https://maps.app.goo.gl/zAXWhRczNPtGVZsMA",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Jinonice.",
+      "Přijďte si popovídat se studenty u našeho stánku u metra Jinonice.",
   },
   // 30. 09. (St): Klamovka
   {
