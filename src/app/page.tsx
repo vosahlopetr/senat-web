@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { cacheLife } from "next/cache";
 import Hero from "@/components/Hero";
+import DesktopTravelingHat from "@/components/DesktopTravelingHat";
 import Bio from "@/components/Bio";
 import LatestArticles from "@/components/LatestArticles";
 import FlappySablo from "@/components/FlappySablo";
@@ -29,6 +30,7 @@ export default async function Home() {
 
   return (
     <main id="main">
+      <DesktopTravelingHat />
       <Hero />
       <RoundTwoBanner />
       <Program />

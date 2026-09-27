@@ -397,30 +397,7 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Tilleho náměstí na Barrandově a v okolí.",
   },
-  // 03. 10. (So): Centrální park (2/2) + minigolf
-  {
-    id: "stanek-centralni-park-minigolf-2026-10-03",
-    date: "2026-10-03",
-    time: "09:30",
-    endTime: "15:00",
-    title: "Kontaktní kampaň a minigolf – Centrální park",
-    place: "Centrální park Stodůlky, Praha 13",
-    mapUrl: "https://maps.app.goo.gl/wugiUhMTsS5ZwEpW8",
-    description:
-      "Odpolední setkání s Radkem Sáblíkem a studenty a studenty a minigolf v Centrálním parku. Přijďte si zahrát a popovídat si.",
-  },
-  // 04. 10. (Ne): Lužiny (5/5)
-  {
-    id: "stanek-luziny-2026-10-04",
-    date: "2026-10-04",
-    time: "09:30",
-    endTime: "15:00",
-    title: "Stánek – Lužiny",
-    place: "Stanice metra Lužiny, Praha 13",
-    mapUrl: "https://maps.app.goo.gl/DyAi8wUZ7Abbb6hK9",
-    description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Lužiny.",
-  },
+
   // 05. 10. (Po): Tilleho náměstí (3/3)
   {
     id: "stanek-tilleho-namesti-2026-10-05",

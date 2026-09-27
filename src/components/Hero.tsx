@@ -38,6 +38,12 @@ export default function Hero() {
         {/* Volební číslo 6 – campaign sticker in the top right corner on desktop */}
         <ElectionSticker className="hidden lg:block absolute lg:top-6 lg:right-6 xl:top-8 xl:right-8 z-20 pointer-events-auto" />
 
+        {/* Start position anchor for propeller hat: center of top of hero */}
+        <div
+          id="hat-hero-start"
+          className="block absolute top-2 left-1/2 -translate-x-1/2 w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-64 lg:h-64 xl:w-72 xl:h-72 pointer-events-none"
+        />
+
         <div className="flex-none lg:flex-1 flex flex-col items-center lg:items-start z-2 w-full">
           <div className="relative w-full">
             <h1 className="relative z-1 font-display font-bold text-cream uppercase tracking-[-0.02em] leading-[0.9] select-none">

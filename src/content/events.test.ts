@@ -139,8 +139,8 @@ describe("getEventIsoBounds", () => {
 });
 
 describe("campaign schedule integrity", () => {
-  it("contains 46 scheduled events", () => {
-    expect(EVENTS.length).toBe(46);
+  it("contains 44 scheduled events", () => {
+    expect(EVENTS.length).toBe(44);
   });
 
   it("ensures every event has a unique ID and valid date format", () => {

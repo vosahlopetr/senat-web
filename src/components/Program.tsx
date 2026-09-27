@@ -46,8 +46,8 @@ const cile = [
 
 function CilItem({ item }: { item: (typeof cile)[number] }) {
   return (
-    <li className="flex flex-col md:flex-row md:items-center gap-6 md:gap-12 px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 mb-5 rounded-[32px] border-[3px] border-cream relative overflow-hidden">
-      <div className="absolute inset-0 z-0">
+    <li className="flex flex-col md:flex-row md:items-center gap-6 md:gap-12 px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 mb-5 rounded-[32px] border-[3px] border-cream relative">
+      <div className="absolute inset-0 z-0 rounded-[29px] overflow-hidden">
         <Image
           src={item.bgImage || "/images/heroimage.jpg"}
           alt=""
@@ -58,6 +58,14 @@ function CilItem({ item }: { item: (typeof cile)[number] }) {
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>
+
+      {item.id === "01" && (
+        <div
+          id="hat-card01-target"
+          className="block absolute -top-16 -right-3 sm:-top-20 sm:-right-4 md:-top-24 md:-right-6 lg:-top-28 lg:-right-8 xl:-top-32 xl:-right-10 w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-56 lg:h-56 xl:w-60 xl:h-60 pointer-events-none"
+        />
+      )}
+
       <div
         className="font-display text-[clamp(3.5rem,10vw,6rem)] leading-[0.8] text-cream font-bold shrink-0 relative z-10 tabular-nums md:text-right"
         aria-hidden="true"
