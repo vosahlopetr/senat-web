@@ -329,26 +329,37 @@ export const EVENTS: readonly CampaignEvent[] = [
   {
     id: "stanek-centralni-park-minigolf-2026-09-28",
     date: "2026-09-28",
-    time: "15:30",
+    time: "14:00",
     endTime: "18:00",
     title: "Kontaktní kampaň a minigolf – Centrální park (státní svátek)",
-    place: "Centrální park Stodůlky, Praha 13",
+    place: "Centrální park na Praze 13, u minigolfu",
     mapUrl: "https://maps.app.goo.gl/wugiUhMTsS5ZwEpW8",
     description:
-      "Sváteční setkání s Radkem Sáblíkem a studenty a studenty a minigolf v Centrálním parku (Svatováclavský den). Přijďte si zahrát, dát kávu a popovídat si.",
+      "Sváteční setkání s Radkem Sáblíkem a studenty a minigolf v Centrálním parku (Svatováclavský den). Přijďte si zahrát a popovídat si.",
   },
-  // 29. 09. (Út): Malvazinky + Jinonice
+  // 29. 09. (Út): Malvazinky (dvě lokace v úterý)
   {
-    id: "stanek-malvazinky-jinonice-2026-09-29",
+    id: "stanek-malvazinky-2026-09-29",
     date: "2026-09-29",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Malvazinky + Jinonice",
-    place: "Malvazinky a Jinonice, Praha 5",
-    mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=Malvazinky,+Praha+5",
+    title: "Stánek – Malvazinky",
+    place: "Malvazinky, Praha 5",
+    mapUrl: "https://maps.app.goo.gl/BhAAiYpAntRVBjWCA",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našich stánků na Malvazinkách a v Jinonicích.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Malvazinkách.",
+  },
+  // 29. 09. (Út): Jinonice (dvě lokace v úterý)
+  {
+    id: "stanek-jinonice-2026-09-29",
+    date: "2026-09-29",
+    time: "15:30",
+    endTime: "18:00",
+    title: "Stánek – Jinonice",
+    place: "Stanice metra Jinonice, Praha 5",
+    mapUrl: "https://maps.app.goo.gl/zAXWhRczNPtGVZsMA",
+    description:
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Jinonice.",
   },
   // 30. 09. (St): Klamovka
   {
@@ -374,18 +385,17 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku Na Knížecí.",
   },
-  // 02. 10. (Pá): Trnkovo náměstí / Chaplinovo náměstí
+  // 02. 10. (Pá): Tilleho náměstí (Barrandov a okolí)
   {
-    id: "stanek-trnkovo-chaplinovo-2026-10-02",
+    id: "stanek-tilleho-namesti-2026-10-02",
     date: "2026-10-02",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Trnkovo náměstí / Chaplinovo náměstí",
-    place: "Trnkovo náměstí a Chaplinovo náměstí, Praha 5",
-    mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=Trnkovo+náměstí,+Praha+5",
+    title: "Stánek – Tilleho náměstí (Barrandov a okolí)",
+    place: "Tilleho náměstí (Barrandov a okolí), Praha 5",
+    mapUrl: "https://maps.app.goo.gl/23L38en2peWx6LTg7",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našich stánků na Trnkově a Chaplinově náměstí.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Tilleho náměstí na Barrandově a v okolí.",
   },
   // 03. 10. (So): Centrální park (2/2) + minigolf
   {
