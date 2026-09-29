@@ -247,10 +247,17 @@ describe("getEventDateParts and getEventCategory helpers", () => {
     expect(catP13.district).toBe("Praha 13");
     expect(catP13.isSpecial).toBe(false);
 
-    const quizP13 = EVENTS.find(
-      (e) => e.id === "stanek-hurka-pub-quiz-2026-10-06",
-    )!;
-    const catQuiz = getEventCategory(quizP13);
+    // No campaign event is a pub quiz anymore, so quiz classification is
+    // covered with a synthetic event.
+    const quizEvent: CampaignEvent = {
+      id: "pub-quiz-test-2026-10-06",
+      date: "2026-10-06",
+      time: "19:30",
+      title: "Pub quiz – test",
+      place: "Praha 13",
+      description: "Testovací hospodský kvíz.",
+    };
+    const catQuiz = getEventCategory(quizEvent);
     expect(catQuiz.badge).toBe("Hospodský kvíz & soutěž");
     expect(catQuiz.district).toBe("Praha 13");
     expect(catQuiz.isSpecial).toBe(true);

@@ -410,17 +410,17 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Tilleho náměstí na Barrandově.",
   },
-  // 06. 10. (Út): Hůrka (5/5) - pub quiz
+  // 06. 10. (Út): Hůrka (5/5)
   {
-    id: "stanek-hurka-pub-quiz-2026-10-06",
+    id: "stanek-hurka-2026-10-06",
     date: "2026-10-06",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek a pub quiz – Hůrka",
+    title: "Stánek – Hůrka",
     place: "Stanice metra Hůrka, Sluneční náměstí, Praha 13",
     mapUrl: "https://maps.app.goo.gl/M3SA4pX3HEfuLzEb9",
     description:
-      "Kontaktní stánek Radka Sáblíka a studentů a pub quiz na Slunečním náměstí u metra Hůrka. Přijďte si popovídat a zasoutěžit.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Hůrka na Slunečním náměstí.",
   },
   // 07. 10. (St): Stodůlky (3/3)
   {
