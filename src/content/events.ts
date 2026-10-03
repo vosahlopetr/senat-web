@@ -398,53 +398,56 @@ export const EVENTS: readonly CampaignEvent[] = [
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Tilleho náměstí na Barrandově a v okolí.",
   },
 
-  // 05. 10. (Po): Tilleho náměstí (3/3)
+  // 05. 10. (Po): Anděl (3/3)
   {
-    id: "stanek-tilleho-namesti-2026-10-05",
+    id: "stanek-andel-2026-10-05",
     date: "2026-10-05",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Tilleho náměstí",
-    place: "Tilleho náměstí, Barrandov, Praha 5",
-    mapUrl: "https://maps.app.goo.gl/23L38en2peWx6LTg7",
+    title: "Stánek – Anděl",
+    place: "Anděl, Praha 5",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=And%C4%9Bl,+Praha+5",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Tilleho náměstí na Barrandově.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Andělu.",
   },
-  // 06. 10. (Út): Hůrka (5/5)
+  // 06. 10. (Út): Lužiny + Sluneční náměstí
   {
-    id: "stanek-hurka-2026-10-06",
+    id: "stanek-luziny-slunecni-namesti-2026-10-06",
     date: "2026-10-06",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Hůrka",
-    place: "Stanice metra Hůrka, Sluneční náměstí, Praha 13",
+    title: "Stánek – Lužiny a Sluneční náměstí",
+    place: "Lužiny a Sluneční náměstí, Praha 13",
     mapUrl: "https://maps.app.goo.gl/M3SA4pX3HEfuLzEb9",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Hůrka na Slunečním náměstí.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našich stánků na Lužinách a Slunečním náměstí.",
   },
-  // 07. 10. (St): Stodůlky (3/3)
+  // 07. 10. (St): Chaplinovo náměstí
   {
-    id: "stanek-stodulky-2026-10-07",
+    id: "stanek-chaplinovo-namesti-2026-10-07",
     date: "2026-10-07",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Stodůlky",
-    place: "Stanice metra Stodůlky, Praha 13",
-    mapUrl: "https://maps.app.goo.gl/uQYcQ4oJAuojdYWQ6",
+    title: "Stánek – Chaplinovo náměstí",
+    place: "Chaplinovo náměstí, Barrandov, Praha 5",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Chaplinovo+n%C3%A1m%C4%9Bst%C3%AD,+Praha+5",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Stodůlky.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Chaplinově náměstí na Barrandově.",
   },
-  // 08. 10. (Čt): Luka (5/5)
+  // 08. 10. (Čt): Anděl (5/5)
   {
-    id: "stanek-luka-2026-10-08",
+    id: "stanek-andel-2026-10-08",
     date: "2026-10-08",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Luka",
-    place: "Stanice metra Luka, Praha 13",
-    mapUrl: "https://maps.app.goo.gl/pYNYHMj6eFTknN8J7",
+    title: "Stánek – Anděl",
+    place: "Anděl, Praha 5",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=And%C4%9Bl,+Praha+5",
     description:
-      "Závěrečný předvolební kontaktní stánek před 1. kolem senátních voleb u metra Luka.",
+      "Závěrečný předvolební kontaktní stánek před 1. kolem senátních voleb na Andělu.",
   },
   // 09. 10. (Pá): VOLBY 1. kolo
   {
