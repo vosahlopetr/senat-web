@@ -10,6 +10,9 @@
  * BEZPEČNOST / PREVENCE ÚNIKŮ:
  * Veřejnost na webu vidí pouze akce na maximálně 7 dní (1 týden) dopředu
  * od aktuálního data. Všechny ostatní termíny zůstávají bezpečně na serveru.
+ *
+ * Dočasně navíc platí embargo EVENTS_HIDDEN_AFTER_DATE – pozdější akce se
+ * veřejně nezobrazují vůbec, dokud ho kampaňový tým nespustí.
  */
 
 export type CampaignEvent = {
@@ -34,6 +37,14 @@ export type CampaignEvent = {
 };
 
 export const EVENT_VISIBILITY_WINDOW_DAYS = 7;
+
+/**
+ * DOČASNÉ UTAJENÍ: veřejně se zobrazují jen akce do tohoto data (včetně) –
+ * cokoli pozdějšího je skryté na /akce i v ICS, i kdyby spadalo do 7denního
+ * okna nebo mělo `alwaysVisible`. Jakmile má být další rozpis zveřejněn,
+ * stačí toto datum posunout (nebo konstantu odstranit).
+ */
+export const EVENTS_HIDDEN_AFTER_DATE = "2026-10-10";
 
 export const EVENTS: readonly CampaignEvent[] = [
   // 01. 09. (Út): Lužiny (1/5)
@@ -398,56 +409,67 @@ export const EVENTS: readonly CampaignEvent[] = [
       "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Tilleho náměstí na Barrandově a v okolí.",
   },
 
-  // 05. 10. (Po): Anděl (3/3)
+  // 05. 10. (Po): Nemocnice Motol a okolí Plzeňské
   {
-    id: "stanek-andel-2026-10-05",
+    id: "stanek-motol-plzenska-2026-10-05",
     date: "2026-10-05",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Anděl",
-    place: "Anděl, Praha 5",
-    mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=And%C4%9Bl,+Praha+5",
+    title: "Stánek – Nemocnice Motol a okolí Plzeňské",
+    place: "Nemocnice Motol a okolí Plzeňské, Praha 5",
+    mapUrl: "https://maps.app.goo.gl/SZ48rtgbRPkorLkv9",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Andělu.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u Nemocnice Motol a v okolí Plzeňské ulice.",
   },
-  // 06. 10. (Út): Lužiny + Sluneční náměstí
+  // 06. 10. (Út): Lužiny
   {
-    id: "stanek-luziny-slunecni-namesti-2026-10-06",
+    id: "stanek-luziny-2026-10-06",
     date: "2026-10-06",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Lužiny a Sluneční náměstí",
-    place: "Lužiny a Sluneční náměstí, Praha 13",
-    mapUrl: "https://maps.app.goo.gl/M3SA4pX3HEfuLzEb9",
+    title: "Stánek – Lužiny",
+    place: "Stanice metra Lužiny, Praha 13",
+    mapUrl: "https://maps.app.goo.gl/DyAi8wUZ7Abbb6hK9",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našich stánků na Lužinách a Slunečním náměstí.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku u metra Lužiny.",
   },
-  // 07. 10. (St): Chaplinovo náměstí
+  // 07. 10. (St): Barrandov – stánky na Tilleho a Trnkově náměstí
   {
-    id: "stanek-chaplinovo-namesti-2026-10-07",
+    id: "stanky-barrandov-tilleho-trnkove-namesti-2026-10-07",
     date: "2026-10-07",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek – Chaplinovo náměstí",
-    place: "Chaplinovo náměstí, Barrandov, Praha 5",
-    mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=Chaplinovo+n%C3%A1m%C4%9Bst%C3%AD,+Praha+5",
+    title: "Stánky – Barrandov (Tilleho a Trnkovo náměstí)",
+    place: "Tilleho náměstí a Trnkovo náměstí, Barrandov, Praha 5",
+    mapUrl: "https://maps.app.goo.gl/23L38en2peWx6LTg7",
     description:
-      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našeho stánku na Chaplinově náměstí na Barrandově.",
+      "Přijďte si popovídat s Radkem Sáblíkem a studenty u našich stánků na Tilleho a Trnkově náměstí na Barrandově.",
   },
-  // 08. 10. (Čt): Anděl (5/5)
+  // 08. 10. (Čt): Anděl – pochod studentů na Malostranské náměstí
   {
-    id: "stanek-andel-2026-10-08",
+    id: "pochod-studentu-andel-malostranske-namesti-2026-10-08",
     date: "2026-10-08",
-    time: "15:30",
-    endTime: "18:00",
+    time: "17:00",
+    endTime: "19:00",
+    title: "Anděl – pochod studentů na Malostranské náměstí",
+    place: "Anděl (sraz pěší zóna), Praha 5 → Malostranské náměstí",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=And%C4%9Bl,+Praha+5",
+    description:
+      "Pochod studentů a příznivců Radka Sáblíka na podporu kandidatury do Senátu. Sraz v 17:00 na Andělu, odkud společně vyrazíme na Malostranské náměstí.",
+  },
+  // 09. 10. (Pá): Anděl (dopolední stánek)
+  {
+    id: "stanek-andel-2026-10-09",
+    date: "2026-10-09",
+    time: "08:30",
+    endTime: "14:00",
     title: "Stánek – Anděl",
     place: "Anděl, Praha 5",
     mapUrl:
       "https://www.google.com/maps/search/?api=1&query=And%C4%9Bl,+Praha+5",
     description:
-      "Závěrečný předvolební kontaktní stánek před 1. kolem senátních voleb na Andělu.",
+      "Závěrečný dopolední předvolební kontaktní stánek před otevřením volebních místností 1. kola senátních voleb na Andělu.",
   },
   // 09. 10. (Pá): VOLBY 1. kolo
   {
@@ -471,17 +493,19 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Druhý volební den 1. kola senátních voleb. Hlasovat můžete do 14:00, poté začíná sčítání hlasů.",
   },
-  // 10. 10. (So): První studentský volební štáb (večer po 1. kole voleb)
+  // 10. 10. (So): Volební mega-afterparty (večer po 1. kole voleb)
   {
     id: "studentsky-volebni-stab-2026-10-10",
     date: "2026-10-10",
     time: "19:30",
     endTime: "01:00",
-    title: "První studentský volební štáb v historii ČR?!",
-    place: "Phenomen, Nádražní 84, Praha 5",
+    title: "Volební mega-afterparty",
+    place: "Phenomen Music Bar, Na Knížecí (Nádražní 84), Praha 5",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Phenomen+Music+Bar,+Praha+5",
     alwaysVisible: true,
     description:
-      "Open DOORS od 19:30. Ve 20:00 oficiální začátek programu a slovo kandidáta do Senátu PČR, pana ředitele Ing. Radka Sáblíka, ve 20:10 slovo studentů k programu večera, od 20:15 pub kvíz s několika okruhy o ceny a od 20:45 diskotéka – každou celou hodinu 2 minuty komentování sčítání výsledků senátních voleb. Ochutnejte naše speciální drinky: True Blue, Virgin Blue a Sáblobomba. Budeme se na Vás těšit!",
+      "Open door od 19:30 v Phenomen Music Baru Na Knížecí. Ve 20:00 oficiální začátek programu a slovo kandidáta do Senátu PČR, pana ředitele Ing. Radka Sáblíka, ve 20:10 slovo studentů k programu večera, od 20:15 pub kvíz s několika okruhy o ceny a od 20:45 diskotéka – každou celou hodinu 2 minuty komentování sčítání výsledků senátních voleb. Ochutnejte naše speciální drinky: True Blue, Virgin Blue a Sáblobomba. Budeme se na Vás těšit!",
   },
   // 11. 10. (Ne): Lužiny (2. kolo)
   {
@@ -656,7 +680,11 @@ export function getEventCategory(event: CampaignEvent): EventCategory {
     event.title.toLowerCase().includes("minigolf") ||
     event.id.includes("minigolf");
   const isSecondRound = event.id.includes("2kolo");
-  const isElectionStaff = event.id.startsWith("studentsky-volebni-stab");
+  const isElectionStaff =
+    event.id.startsWith("studentsky-volebni-stab") ||
+    event.title.toLowerCase().includes("afterparty");
+  const isMarch =
+    event.title.toLowerCase().includes("pochod") || event.id.includes("pochod");
 
   let badge = "Kontaktní stánek";
   if (isElection) {
@@ -670,6 +698,8 @@ export function getEventCategory(event: CampaignEvent): EventCategory {
     badge = "Sváteční minigolf";
   } else if (isElectionStaff) {
     badge = "Studentský volební štáb";
+  } else if (isMarch) {
+    badge = "Studentský pochod";
   } else if (isSecondRound) {
     badge = "Kontaktní stánek (před 2. kolem)";
   }
@@ -684,7 +714,7 @@ export function getEventCategory(event: CampaignEvent): EventCategory {
   return {
     badge,
     district,
-    isSpecial: isQuiz || isMinigolf || isElectionStaff,
+    isSpecial: isQuiz || isMinigolf || isElectionStaff || isMarch,
     isElection,
   };
 }
@@ -715,6 +745,7 @@ export function getMaxVisibleDateString(
  * Returns events that are currently visible to the public:
  * - Event day has not fully passed (Europe/Prague end of day >= nowMs)
  * - Event date is at most 7 days into the future (today + windowDays)
+ * - Event date is not after the temporary embargo date (EVENTS_HIDDEN_AFTER_DATE)
  */
 export function upcomingEvents(
   nowMs: number,
@@ -728,7 +759,8 @@ export function upcomingEvents(
     const hasNotPassed = eventEndOfDay >= nowMs;
     const isWithinWindow =
       event.alwaysVisible === true || event.date <= maxVisibleDate;
-    return hasNotPassed && isWithinWindow;
+    const isBeforeEmbargo = event.date <= EVENTS_HIDDEN_AFTER_DATE;
+    return hasNotPassed && isWithinWindow && isBeforeEmbargo;
   });
 }
 
@@ -747,7 +779,8 @@ export function getEventById(id: string): CampaignEvent | undefined {
 
 /**
  * Finds an event by ID ONLY if it is currently within the public visibility window.
- * Returns undefined for events that have passed or are scheduled > 7 days in the future.
+ * Returns undefined for events that have passed, are scheduled > 7 days in the
+ * future, or fall after the temporary embargo (EVENTS_HIDDEN_AFTER_DATE).
  */
 export function getPublicEventById(
   id: string,

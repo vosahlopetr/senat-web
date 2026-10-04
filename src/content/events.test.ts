@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   buildEventIcs,
   EVENTS,
+  EVENTS_HIDDEN_AFTER_DATE,
   getEventById,
   getEventCategory,
   getEventDateParts,
@@ -36,8 +37,8 @@ const nightEvent: CampaignEvent = {
   date: "2026-10-10",
   time: "19:30",
   endTime: "01:00",
-  title: "První studentský volební štáb v historii ČR?!",
-  place: "Phenomen, Nádražní 84, Praha 5",
+  title: "Volební mega-afterparty",
+  place: "Phenomen Music Bar, Na Knížecí (Nádražní 84), Praha 5",
   alwaysVisible: true,
 };
 
@@ -139,8 +140,8 @@ describe("getEventIsoBounds", () => {
 });
 
 describe("campaign schedule integrity", () => {
-  it("contains 44 scheduled events", () => {
-    expect(EVENTS.length).toBe(44);
+  it("contains 45 scheduled events", () => {
+    expect(EVENTS.length).toBe(45);
   });
 
   it("ensures every event has a unique ID and valid date format", () => {
@@ -201,6 +202,24 @@ describe("7-day visibility and leak prevention", () => {
     );
     expect(invitation).toBeDefined();
     expect(invitation?.alwaysVisible).toBe(true);
+  });
+
+  it("hides events after EVENTS_HIDDEN_AFTER_DATE (temporary embargo)", () => {
+    // 2026-10-05 + 7 days → 2026-10-12 would normally fall inside the window.
+    const nowMs = new Date("2026-10-05T12:00:00+02:00").getTime();
+    const dates = upcomingEvents(nowMs).map((e) => e.date);
+
+    // The cutoff day itself stays visible (also via alwaysVisible).
+    expect(dates).toContain("2026-10-10");
+    // Nothing beyond the embargo leaks, even inside the 7-day window.
+    expect(dates.filter((date) => date > EVENTS_HIDDEN_AFTER_DATE)).toEqual([]);
+
+    // Hidden from per-ID public lookup too (e.g. guessed ICS URLs).
+    expect(
+      getPublicEventById("stanek-2kolo-luziny-2026-10-11", nowMs),
+    ).toBeUndefined();
+    // …while the internal lookup still sees it.
+    expect(getEventById("stanek-2kolo-luziny-2026-10-11")).toBeDefined();
   });
 
   it("getPublicEventById returns an event within the 7-day window, but rejects future events", () => {
@@ -283,5 +302,13 @@ describe("getEventDateParts and getEventCategory helpers", () => {
     expect(catStaff.badge).toBe("Studentský volební štáb");
     expect(catStaff.district).toBe("Praha 5");
     expect(catStaff.isSpecial).toBe(true);
+
+    const march = EVENTS.find(
+      (e) => e.id === "pochod-studentu-andel-malostranske-namesti-2026-10-08",
+    )!;
+    const catMarch = getEventCategory(march);
+    expect(catMarch.badge).toBe("Studentský pochod");
+    expect(catMarch.district).toBe("Praha 5");
+    expect(catMarch.isSpecial).toBe(true);
   });
 });
