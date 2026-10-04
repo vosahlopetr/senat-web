@@ -2,13 +2,25 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 const METADATA_ROUTE_PATTERN =
-  /\/(opengraph-image|twitter-image|apple-icon|icon\d*)$|^\/(sitemap\.xml|robots\.txt|manifest\.webmanifest)$/;
+  /\/(opengraph-image|twitter-image|apple-icon|icon\d*)$|^\/(sitemap\.xml|robots\.txt|llms\.txt|manifest\.webmanifest)$/;
 
 function isMetadataRoute(pathname: string) {
   return METADATA_ROUTE_PATTERN.test(pathname);
 }
 
 export function proxy(request: NextRequest) {
+  const host = request.headers.get("host") ?? request.nextUrl.hostname;
+  const proto = request.headers.get("x-forwarded-proto");
+  if (
+    host === "sablikdosenatu.cz" ||
+    (host === "www.sablikdosenatu.cz" && proto === "http")
+  ) {
+    const url = request.nextUrl.clone();
+    url.hostname = "www.sablikdosenatu.cz";
+    url.protocol = "https";
+    return NextResponse.redirect(url, 301);
+  }
+
   const status = process.env.POST_ELECTION_STATUS;
   const isPostElection = status === "victory" || status === "loss";
   const { pathname } = request.nextUrl;
@@ -48,7 +60,7 @@ export const config = {
   matcher: [
     {
       source:
-        "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|manifest.webmanifest|opengraph-image|twitter-image|apple-icon|images/|assets/).*)",
+        "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|llms.txt|manifest.webmanifest|opengraph-image|twitter-image|apple-icon|images/|assets/).*)",
       missing: [
         { type: "header", key: "next-router-prefetch" },
         { type: "header", key: "purpose", value: "prefetch" },

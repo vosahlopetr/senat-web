@@ -14,6 +14,13 @@ import { SOCIAL_LINKS } from "@/lib/site-config";
 import "./globals.css";
 
 const socialProfileUrls = SOCIAL_LINKS.map((social) => social.href);
+const personSameAs = [
+  "https://cs.wikipedia.org/wiki/Radko_S%C3%A1bl%C3%ADk",
+  "https://www.facebook.com/sablikdosenatu",
+  "https://www.instagram.com/sablikdosenatu",
+  "https://www.ods.cz/profil/23617-radko-sablik",
+  ...socialProfileUrls,
+].filter((url, index, self) => self.indexOf(url) === index);
 
 export const metadata: Metadata = rootMetadata;
 
@@ -58,10 +65,10 @@ const jsonLd: Graph = {
       name: "Radko Sáblík",
       url: SITE_URL,
       jobTitle:
-        "Ředitel Smíchovské střední průmyslové školy a gymnázia, kandidát do Senátu",
+        "Kandidát do Senátu PČR za obvod č. 21 (Praha 5 a Praha 13), ředitel Smíchovské střední",
       image: `${SITE_URL}/opengraph-image`,
       description:
-        "Radko Sáblík je ředitel Smíchovské střední průmyslové školy a gymnázia. V roce 2026 kandiduje do Senátu Parlamentu ČR za obvod č. 21 (Praha 5 a Praha 13) jako společný kandidát koalice ODS, STAN a KDU-ČSL.",
+        "Radko Sáblík je ředitel Smíchovské střední. V roce 2026 kandiduje do Senátu Parlamentu ČR za obvod č. 21 (Praha 5 a Praha 13) jako společný kandidát koalice ODS, STAN a KDU-ČSL.",
       alumniOf: [
         {
           "@type": "CollegeOrUniversity",
@@ -99,7 +106,7 @@ const jsonLd: Graph = {
           url: "https://www.kdu.cz",
         },
       ],
-      sameAs: socialProfileUrls,
+      sameAs: personSameAs,
     },
   ],
 };

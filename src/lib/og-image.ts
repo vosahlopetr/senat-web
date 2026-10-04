@@ -19,7 +19,8 @@ export const OG_ACCENT_MUTED = "#363531";
 /** `--color-accent` at 80% opacity on white (disclaimer text). */
 export const OG_ACCENT_SUBTLE = "#42413d";
 
-export const ogImageAlt = "Sáblík do Senátu – Odvaha dělat věci jinak";
+export const ogImageAlt =
+  "Radko Sáblík – Oficiální web kandidáta do Senátu (Praha 5 a 13) | Číslo 6";
 
 export const ogImageSize = {
   width: 1200,

@@ -14,10 +14,15 @@ import Media from "@/components/Media";
 import Social from "@/components/Social";
 import Books from "@/components/Books";
 import FinalCTA from "@/components/FinalCTA";
+import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
+  title: {
+    absolute:
+      "Radko Sáblík – Oficiální web kandidáta do Senátu (Praha 5 a 13) | Číslo 6",
+  },
   alternates: {
-    canonical: "/",
+    canonical: `${SITE_URL}/`,
   },
 };
 

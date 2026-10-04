@@ -47,6 +47,10 @@ export default function Hero() {
         <div className="flex-none lg:flex-1 flex flex-col items-center lg:items-start z-2 w-full">
           <div className="relative w-full">
             <h1 className="relative z-1 font-display font-bold text-cream uppercase tracking-[-0.02em] leading-[0.9] select-none">
+              <span className="sr-only">
+                Radko Sáblík – Oficiální web kandidáta do Senátu (Praha 5 a 13)
+                | Číslo 6:{" "}
+              </span>
               <span className="block text-[clamp(4.375rem,15vw,7.5rem)] md:text-[clamp(4.5rem,8vw,7rem)]">
                 ODVAHA DĚLAT
               </span>

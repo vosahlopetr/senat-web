@@ -4,9 +4,9 @@ import { aboutStory } from "@/content/about";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Kdo je Sáblík?",
+  title: "Radko Sáblík – Životopis a příběh kandidáta do Senátu",
   description:
-    "Přečtěte si příběh Radka Sáblíka. Cesta od inženýra přes ředitele elitní průmyslovky až po kandidaturu do Senátu s kampaní vedenou jeho vlastními studenty.",
+    "Přečtěte si příběh a životopis Radka Sáblíka. Cesta od inženýra přes ředitele Smíchovské střední až po kandidaturu do Senátu za obvod č. 21 (Praha 5 a 13).",
   path: "/o-mne",
 });
 

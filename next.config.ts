@@ -156,6 +156,11 @@ const nextConfig: NextConfig = {
             value:
               "camera=(), microphone=(), geolocation=(), browsing-topics=()",
           },
+          {
+            // llms.txt v2 discovery header
+            key: "Link",
+            value: '</llms.txt>; rel="describedby"',
+          },
         ],
       },
     ];

@@ -9,7 +9,8 @@ export const SITE_NAME = "Radko Sáblík";
  * benefit + place extension („…a líp. Pro Prahu 5 a 13.“) lives in the
  * description so the title stays within SERP length.
  */
-export const DEFAULT_TITLE = "Sáblík do Senátu — Odvaha dělat věci jinak";
+export const DEFAULT_TITLE =
+  "Radko Sáblík – Oficiální web kandidáta do Senátu (Praha 5 a 13) | Číslo 6";
 export const DEFAULT_DESCRIPTION =
   "Radko Sáblík, ředitel Smíchovské střední a kandidát do Senátu za obvod č. 21 (Praha 5 a 13). Společný kandidát ODS, STAN a KDU-ČSL. Odvaha dělat věci jinak a líp.";
 export const DEFAULT_TWITTER = "@RadkoSablik";
@@ -17,7 +18,7 @@ export const DEFAULT_OG_IMAGE = {
   url: "/opengraph-image",
   width: 1200,
   height: 630,
-  alt: "Sáblík do Senátu – Odvaha dělat věci jinak",
+  alt: "Radko Sáblík – Oficiální web kandidáta do Senátu (Praha 5 a 13) | Číslo 6",
 };
 
 type OgImageDescriptor = {
@@ -82,7 +83,7 @@ export const buildPageMetadata = ({
     title,
     description: metaDescription,
     alternates: {
-      canonical: canonicalPath,
+      canonical: absoluteCanonical,
     },
     openGraph: {
       type: "website",
@@ -106,6 +107,18 @@ export const buildPageMetadata = ({
     metadata.robots = {
       index: !noIndex,
       follow: !noIndex,
+    };
+  } else {
+    metadata.robots = {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     };
   }
 
@@ -155,14 +168,25 @@ export const rootMetadata: Metadata = {
   description: DEFAULT_DESCRIPTION,
   keywords: [
     "Radko Sáblík",
+    "Radko Sablik",
+    "Sáblík do Senátu",
+    "Sáblík senátor",
+    "Sablik do Senatu",
+    "Sablik senator",
+    "Sáblík",
+    "Sablik",
+    "senátor",
+    "senator",
     "Senát",
     "volby 2026",
     "Praha 5",
     "Praha 13",
+    "obvod 21",
     "ODS",
     "STAN",
     "KDU-ČSL",
     "Smíchovská střední",
+    "SSPS",
     "školství",
   ],
   generator: "Next.js",
@@ -171,6 +195,20 @@ export const rootMetadata: Metadata = {
   authors: [{ name: "Radko Sáblík" }],
   creator: "Radko Sáblík",
   publisher: "Radko Sáblík",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "./",
+  },
   formatDetection: {
     email: false,
     address: false,
