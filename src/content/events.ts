@@ -493,19 +493,19 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Druhý volební den 1. kola senátních voleb. Hlasovat můžete do 14:00, poté začíná sčítání hlasů.",
   },
-  // 10. 10. (So): Volební mega-afterparty (večer po 1. kole voleb)
+  // 10. 10. (So): První studentská volební pařba v historii ČR?! (večer po 1. kole voleb)
   {
     id: "studentsky-volebni-stab-2026-10-10",
     date: "2026-10-10",
     time: "19:30",
     endTime: "01:00",
-    title: "Volební mega-afterparty",
+    title: "První studentská volební pařba v historii ČR?!",
     place: "Phenomen Music Bar, Na Knížecí (Nádražní 84), Praha 5",
     mapUrl:
       "https://www.google.com/maps/search/?api=1&query=Phenomen+Music+Bar,+Praha+5",
     alwaysVisible: true,
     description:
-      "Open door od 19:30 v Phenomen Music Baru Na Knížecí. Ve 20:00 oficiální začátek programu a slovo kandidáta do Senátu PČR, pana ředitele Ing. Radka Sáblíka, ve 20:10 slovo studentů k programu večera, od 20:15 pub kvíz s několika okruhy o ceny a od 20:45 diskotéka – každou celou hodinu 2 minuty komentování sčítání výsledků senátních voleb. Ochutnejte naše speciální drinky: True Blue, Virgin Blue a Sáblobomba. Budeme se na Vás těšit!",
+      "Přijďte si s námi užít sobotní večer – ať už dopadne výsledek jakkoli, bude to lepší jízda než ve Vegas! Pozvěte i kámoše a kámošky. Open doors od 19:30 v Phenomenu na Nádražní 84, ve 20:00 oficiální začátek programu a slovo kandidáta do Senátu PČR, pana ředitele Ing. Radka Sáblíka. Ve 20:10 bude slovo studentů k programu večera, od 20:15 pub kvíz s několika okruhy o ceny a od 20:45 diskotéka s hudbou na přání a DJ. Ochutnejte naše speciální drinky True Blue, Virgin Blue (nealko verze) a Sáblobombu. Budeme se na Vás těšit!",
   },
   // 11. 10. (Ne): Lužiny (2. kolo)
   {
