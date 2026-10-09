@@ -67,7 +67,9 @@ export default function CountdownClient({
         Přijďte znovu <CalendarDateLink>16.–17. října</CalendarDateLink>.
       </>
     ) : state.phase === "during" ? (
-      "Volby právě probíhají!"
+      <>
+        Volby jsou <CalendarDateLink>dnes a zítra</CalendarDateLink>!
+      </>
     ) : state.daysLeft <= URGENCY_WINDOW_DAYS ? (
       <>
         Volby <CalendarDateLink>9. a 10. října</CalendarDateLink> – už za{" "}

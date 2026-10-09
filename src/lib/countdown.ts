@@ -51,6 +51,15 @@ export function getCountdownState(nowMs: number): CountdownState {
     };
   }
 
+  // Election day starts at midnight, not at poll-opening time (14:00). On the
+  // morning of election day the site should say the vote is *today*, not report
+  // "1 den" because the polls only open at 14:00.
+  const electionDayStart = new Date(ELECTION_START);
+  electionDayStart.setHours(0, 0, 0, 0);
+  if (nowMs >= electionDayStart.getTime()) {
+    return { phase: "during", daysLeft: 0 };
+  }
+
   const diffMs = ELECTION_START.getTime() - nowMs;
   if (diffMs <= 0) {
     return { phase: "during", daysLeft: 0 };
