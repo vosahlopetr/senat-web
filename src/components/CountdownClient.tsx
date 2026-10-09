@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import Link from "next/link";
 import { track } from "@vercel/analytics";
 import {
   daysSuffix,
@@ -28,6 +29,24 @@ function CalendarDateLink({ children }: { children: React.ReactNode }) {
     >
       {children}
     </a>
+  );
+}
+
+/**
+ * Election-day message links to the how-to-vote page instead of the calendar
+ * file: on the day itself the job is polling logistics (where, what to bring),
+ * not plan-making.
+ */
+function HowToVoteLink({ children }: { children: React.ReactNode }) {
+  return (
+    <Link
+      href="/jak-volit"
+      title="Jak volit – termíny, co vzít s sebou, voličský průkaz"
+      className="underline decoration-2 underline-offset-4 transition-opacity hover:opacity-70"
+      onClick={() => track("jak_volit_click", { source: "countdown" })}
+    >
+      {children}
+    </Link>
   );
 }
 
@@ -68,7 +87,7 @@ export default function CountdownClient({
       </>
     ) : state.phase === "during" ? (
       <>
-        Volby jsou <CalendarDateLink>dnes a zítra</CalendarDateLink>!
+        Volby jsou <HowToVoteLink>dnes a zítra</HowToVoteLink>!
       </>
     ) : state.daysLeft <= URGENCY_WINDOW_DAYS ? (
       <>
