@@ -140,8 +140,8 @@ describe("getEventIsoBounds", () => {
 });
 
 describe("campaign schedule integrity", () => {
-  it("contains 45 scheduled events", () => {
-    expect(EVENTS.length).toBe(45);
+  it("contains 46 scheduled events", () => {
+    expect(EVENTS.length).toBe(46);
   });
 
   it("ensures every event has a unique ID and valid date format", () => {
@@ -204,21 +204,25 @@ describe("7-day visibility and leak prevention", () => {
     expect(invitation?.alwaysVisible).toBe(true);
   });
 
-  it("hides events after EVENTS_HIDDEN_AFTER_DATE (temporary embargo)", () => {
-    // 2026-10-05 + 7 days → 2026-10-12 would normally fall inside the window.
-    const nowMs = new Date("2026-10-05T12:00:00+02:00").getTime();
+  it("publishes the round-2 week up to EVENTS_HIDDEN_AFTER_DATE (embargo lifted)", () => {
+    const nowMs = new Date("2026-10-11T12:00:00+02:00").getTime();
     const dates = upcomingEvents(nowMs).map((e) => e.date);
 
-    // The cutoff day itself stays visible (also via alwaysVisible).
-    expect(dates).toContain("2026-10-10");
+    // Next week's stánky are now public, through election day.
+    expect(dates).toContain("2026-10-12");
+    expect(dates).toContain("2026-10-13");
+    expect(dates).toContain("2026-10-14");
+    expect(dates).toContain("2026-10-15");
+    expect(dates).toContain("2026-10-16");
+    expect(dates).toContain("2026-10-17");
     // Nothing beyond the embargo leaks, even inside the 7-day window.
     expect(dates.filter((date) => date > EVENTS_HIDDEN_AFTER_DATE)).toEqual([]);
 
-    // Hidden from per-ID public lookup too (e.g. guessed ICS URLs).
+    // Per-ID public lookup works for the published round-2 schedule.
     expect(
       getPublicEventById("stanek-2kolo-luziny-2026-10-11", nowMs),
-    ).toBeUndefined();
-    // …while the internal lookup still sees it.
+    ).toBeDefined();
+    // …and the internal lookup still sees it.
     expect(getEventById("stanek-2kolo-luziny-2026-10-11")).toBeDefined();
   });
 

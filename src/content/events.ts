@@ -44,7 +44,7 @@ export const EVENT_VISIBILITY_WINDOW_DAYS = 7;
  * okna nebo mělo `alwaysVisible`. Jakmile má být další rozpis zveřejněn,
  * stačí toto datum posunout (nebo konstantu odstranit).
  */
-export const EVENTS_HIDDEN_AFTER_DATE = "2026-10-10";
+export const EVENTS_HIDDEN_AFTER_DATE = "2026-10-17";
 
 export const EVENTS: readonly CampaignEvent[] = [
   // 01. 09. (Út): Lužiny (1/5)
@@ -513,59 +513,72 @@ export const EVENTS: readonly CampaignEvent[] = [
     date: "2026-10-11",
     time: "09:30",
     endTime: "15:00",
-    title: "Stánek před 2. kolem – Lužiny",
+    title: "Stánek – Lužiny",
     place: "Stanice metra Lužiny, Praha 13",
     mapUrl: "https://maps.app.goo.gl/DyAi8wUZ7Abbb6hK9",
     description:
       "Kontaktní kampaň před 2. kolem voleb do Senátu. Přijďte si popovídat s Radkem Sáblíkem a studenty u metra Lužiny.",
   },
-  // 12. 10. (Po): Hůrka (2. kolo)
+  // 12. 10. (Po): Plzeňská a Motol (2. kolo)
   {
-    id: "stanek-2kolo-hurka-2026-10-12",
+    id: "stanek-2kolo-plzenska-motol-2026-10-12",
     date: "2026-10-12",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek před 2. kolem – Hůrka",
-    place: "Stanice metra Hůrka, Sluneční náměstí, Praha 13",
-    mapUrl: "https://maps.app.goo.gl/M3SA4pX3HEfuLzEb9",
+    title: "Stánek – Plzeňská a Motol",
+    place: "Nemocnice Motol a okolí Plzeňské, Praha 5",
+    mapUrl: "https://maps.app.goo.gl/SZ48rtgbRPkorLkv9",
     description:
-      "Kontaktní kampaň před 2. kolem voleb do Senátu. Přijďte si popovídat s Radkem Sáblíkem a studenty na Hůrce.",
+      "Kontaktní kampaň před 2. kolem voleb do Senátu. Přijďte si popovídat s Radkem Sáblíkem a studenty u Nemocnice Motol a v okolí Plzeňské ulice.",
   },
-  // 13. 10. (Út): Tilleho náměstí (2. kolo)
+  // 13. 10. (Út): Barrandov – Chaplinovo a Trnkovo náměstí (2. kolo)
   {
-    id: "stanek-2kolo-tilleho-namesti-2026-10-13",
+    id: "stanky-2kolo-barrandov-2026-10-13",
     date: "2026-10-13",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek před 2. kolem – Tilleho náměstí",
-    place: "Tilleho náměstí, Barrandov, Praha 5",
+    title: "Stánky – Barrandov (Chaplinovo a Trnkovo náměstí)",
+    place: "Chaplinovo náměstí a Trnkovo náměstí, Barrandov, Praha 5",
     mapUrl: "https://maps.app.goo.gl/23L38en2peWx6LTg7",
     description:
-      "Kontaktní kampaň před 2. kolem voleb do Senátu na Barrandově.",
+      "Kontaktní kampaň před 2. kolem voleb do Senátu na Barrandově. Přijďte si popovídat s Radkem Sáblíkem a studenty na Chaplinově a Trnkově náměstí.",
   },
-  // 14. 10. (St): Luka (2. kolo)
+  // 14. 10. (St): Stodůlky a Luka (2. kolo)
   {
-    id: "stanek-2kolo-luka-2026-10-14",
+    id: "stanky-2kolo-stodulky-luka-2026-10-14",
     date: "2026-10-14",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek před 2. kolem – Luka",
-    place: "Stanice metra Luka, Praha 13",
-    mapUrl: "https://maps.app.goo.gl/pYNYHMj6eFTknN8J7",
+    title: "Stánky – Stodůlky a Luka",
+    place: "Stanice metra Stodůlky a Luka, Praha 13",
+    mapUrl: "https://maps.app.goo.gl/uQYcQ4oJAuojdYWQ6",
     description:
-      "Kontaktní kampaň před 2. kolem voleb do Senátu. Přijďte si popovídat s Radkem Sáblíkem a studenty u metra Luka.",
+      "Kontaktní kampaň před 2. kolem voleb do Senátu. Přijďte si popovídat s Radkem Sáblíkem a studenty u metra Stodůlky a Luka.",
   },
-  // 15. 10. (Čt): Na Knížecí (2. kolo)
+  // 15. 10. (Čt): Hůrka a Lužiny (2. kolo)
   {
-    id: "stanek-2kolo-na-knizeci-2026-10-15",
+    id: "stanky-2kolo-hurka-luziny-2026-10-15",
     date: "2026-10-15",
     time: "15:30",
     endTime: "18:00",
-    title: "Stánek před 2. kolem – Na Knížecí",
-    place: "Na Knížecí (Anděl), Praha 5",
-    mapUrl: "https://maps.app.goo.gl/Ep2AQTtk9FVJjqf49",
+    title: "Stánky – Hůrka a Lužiny",
+    place: "Stanice metra Hůrka a Lužiny, Praha 13",
+    mapUrl: "https://maps.app.goo.gl/M3SA4pX3HEfuLzEb9",
     description:
-      "Závěrečný kontaktní stánek před rozhodujícím 2. kolem senátních voleb Na Knížecí.",
+      "Kontaktní kampaň před 2. kolem voleb do Senátu. Přijďte si popovídat s Radkem Sáblíkem a studenty u metra Hůrka a Lužiny.",
+  },
+  // 16. 10. (Pá): Anděl (2. kolo – dopolední stánek před volbami)
+  {
+    id: "stanek-2kolo-andel-2026-10-16",
+    date: "2026-10-16",
+    time: "07:00",
+    endTime: "14:00",
+    title: "Stánek – Anděl",
+    place: "Anděl, Praha 5",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=And%C4%9Bl,+Praha+5",
+    description:
+      "Závěrečný dopolední kontaktní stánek před otevřením volebních místností 2. kola senátních voleb na Andělu.",
   },
   // 16. 10. (Pá): VOLBY 2. kolo
   {
