@@ -171,6 +171,10 @@ const nextConfig: NextConfig = {
    * ========================================================================== */
 
   experimental: {
+    // Policy for `next upgrade --agent` and upgrade reminders during
+    // `next dev`/`next build`: track the newest stable release.
+    agentUpgrade: "latest",
+
     // Required for MDX
     mdxRs: true,
 
