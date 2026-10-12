@@ -204,8 +204,8 @@ export default function CilePage() {
           </section>
 
           <div className="!mt-14 flex flex-wrap gap-4 justify-center">
-            <Link href="?modal=support" className="btn btn-primary text-center">
-              Přidejte se k nám
+            <Link href="/jak-volit" className="btn btn-primary text-center">
+              Jak volit
             </Link>
           </div>
         </div>

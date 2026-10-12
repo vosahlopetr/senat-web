@@ -61,8 +61,8 @@ async function renderSiteOgImageBytes(): Promise<ArrayBuffer> {
       }}
     >
       <img src={logoDataUri} width={600} height={228} alt="Sáblík do Senátu" />
-      {/* Canonical slogan form: master message + benefit + place, so every
-          share carries the full claim, not just the name device. */}
+      {/* Campaign slogan, so every share carries the claim, not just the
+          name device. */}
       <p
         style={{
           margin: 0,
@@ -75,7 +75,7 @@ async function renderSiteOgImageBytes(): Promise<ArrayBuffer> {
           letterSpacing: "0.01em",
         }}
       >
-        Odvaha dělat věci jinak – a líp. Pro Prahu 5 a 13.
+        Volte Sáblíka ve 2. kole.
       </p>
     </div>,
     {

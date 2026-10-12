@@ -82,8 +82,7 @@ export default function CountdownClient({
       "Druhé kolo právě probíhá!"
     ) : state.phase === "between" ? (
       <>
-        Rozhoduje se ve 2. kole! <br className="md:hidden" />
-        Přijďte znovu <CalendarDateLink>16.–17. října</CalendarDateLink>.
+        Přijďte znovu volit <CalendarDateLink>tento víkend</CalendarDateLink>!
       </>
     ) : state.phase === "during" ? (
       <>

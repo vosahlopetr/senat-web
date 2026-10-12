@@ -101,10 +101,10 @@ export default function Footer() {
               </nav>
               <div className="mt-4">
                 <Link
-                  href="?modal=support"
+                  href="/jak-volit"
                   className="btn btn-primary w-full text-center md:w-auto"
                 >
-                  PŘIDEJTE SE
+                  JAK VOLIT
                 </Link>
               </div>
 

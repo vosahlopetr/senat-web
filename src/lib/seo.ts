@@ -5,14 +5,14 @@ export { SITE_URL };
 export const SITE_NAME = "Radko Sáblík";
 /**
  * Canonical master message: the name-linked device ("Sáblík do Senátu",
- * which also carries the S–S alliteration) fused with the slogan. The
- * benefit + place extension („…a líp. Pro Prahu 5 a 13.“) lives in the
- * description so the title stays within SERP length.
+ * which also carries the S–S alliteration). The campaign slogan
+ * („Volte Sáblíka ve 2. kole.“) lives in the description so
+ * the title stays within SERP length.
  */
 export const DEFAULT_TITLE =
   "Radko Sáblík – Oficiální web kandidáta do Senátu (Praha 5 a 13) | Číslo 6";
 export const DEFAULT_DESCRIPTION =
-  "Radko Sáblík, ředitel Smíchovské střední a kandidát do Senátu za obvod č. 21 (Praha 5 a 13). Společný kandidát ODS, STAN a KDU-ČSL. Odvaha dělat věci jinak a líp.";
+  "Radko Sáblík, ředitel Smíchovské střední a kandidát do Senátu za obvod č. 21 (Praha 5 a 13). Společný kandidát ODS, STAN a KDU-ČSL. Volte Sáblíka ve 2. kole.";
 export const DEFAULT_TWITTER = "@RadkoSablik";
 export const DEFAULT_OG_IMAGE = {
   url: "/opengraph-image",

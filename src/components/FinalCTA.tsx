@@ -25,8 +25,8 @@ function CalendarDateLink({ children }: { children: React.ReactNode }) {
 
 /**
  * One master message, one action. In the persuasion phase the block carries
- * the canonical slogan form with the benefit and place welded on („…a líp.
- * Pro Prahu 5 a 13.“) instead of a generic change platitude. In the final
+ * the campaign slogan („Volte Sáblíka ve 2. kole.“) instead of a
+ * generic change platitude. In the final
  * month and around the rounds it switches to turnout copy – dates plus a
  * bring-someone prompt: plan-making and social/companionship pressure are
  * the levers that measurably move turnout (Nickerson & Rogers 2010;
@@ -72,36 +72,19 @@ export default function FinalCTA() {
               </>
             ) : (
               <>
-                Odvaha dělat věci jinak – a líp. Pro Prahu 5 a 13. Přidejte se
-                ke kampani, kterou vedou studenti a lidé z našeho obvodu.
+                Volte Sáblíka ve 2. kole. Přidejte se ke kampani, kterou vedou
+                studenti a lidé z našeho obvodu.
               </>
             )}
           </p>
 
           <div className="flex gap-4 justify-center lg:justify-start flex-wrap">
-            {mobilize ? (
-              <>
-                <Link
-                  href="/jak-volit"
-                  className="btn btn-primary md:text-xl md:px-10 md:py-5"
-                >
-                  JAK VOLIT
-                </Link>
-                <Link
-                  href="?modal=support"
-                  className="btn btn-secondary md:text-xl md:px-10 md:py-5"
-                >
-                  PŘIDEJTE SE K NÁM
-                </Link>
-              </>
-            ) : (
-              <Link
-                href="?modal=support"
-                className="btn btn-primary md:text-xl md:px-10 md:py-5"
-              >
-                PŘIDEJTE SE K NÁM
-              </Link>
-            )}
+            <Link
+              href="/jak-volit"
+              className="btn btn-primary md:text-xl md:px-10 md:py-5"
+            >
+              JAK VOLIT
+            </Link>
           </div>
         </div>
 

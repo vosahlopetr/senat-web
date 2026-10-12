@@ -28,25 +28,21 @@ export default function RoundTwoBanner() {
   return (
     <section
       aria-labelledby="round2-heading"
-      className="section bg-primary text-cream relative border-y-[3px] border-cream/30"
+      className="section bg-cream text-primary relative"
     >
       <div className="container flex flex-col items-center text-center gap-6">
         <h2
           id="round2-heading"
-          className="font-display font-bold uppercase tracking-[-0.02em] leading-[0.95] text-[clamp(2.5rem,7vw,4.25rem)] m-0"
+          className="font-display font-bold uppercase tracking-[-0.02em] leading-[0.95] text-[clamp(2.5rem,7vw,4.25rem)] text-accent m-0"
         >
           {isVotingNow ? (
-            <>
-              <span className="marker-strike">Druhé kolo</span> právě probíhá!
-            </>
+            <>Druhé kolo právě probíhá!</>
           ) : (
-            <>
-              Rozhoduje <span className="marker-strike">druhé kolo</span>!
-            </>
+            <>Rozhoduje druhé kolo!</>
           )}
         </h2>
 
-        <p className="m-0 max-w-[720px] font-semibold text-[clamp(1.125rem,2.5vw,1.5rem)] leading-[1.4]">
+        <p className="m-0 max-w-[720px] font-semibold text-[clamp(1.125rem,2.5vw,1.5rem)] leading-[1.4] text-[oklch(17.8%_0.01_88.8_/_0.7)]">
           {isVotingNow ? (
             <>
               Volební místnosti jsou otevřené v pátek 14:00–22:00 a v sobotu
@@ -72,7 +68,7 @@ export default function RoundTwoBanner() {
         </p>
 
         {ROUND2_RESULTS_NOTE ? (
-          <p className="m-0 max-w-[720px] text-[1.05rem] md:text-[1.15rem] font-medium leading-[1.5] opacity-90">
+          <p className="m-0 max-w-[720px] text-[1.05rem] md:text-[1.15rem] font-medium leading-[1.5] text-[oklch(17.8%_0.01_88.8_/_0.7)]">
             {ROUND2_RESULTS_NOTE}
           </p>
         ) : null}
@@ -99,14 +95,6 @@ export default function RoundTwoBanner() {
               ))}
             </ul>
           </div>
-        ) : null}
-
-        {!isVotingNow ? (
-          <p className="m-0 max-w-[720px] text-[1rem] md:text-[1.1rem] font-medium leading-[1.5] opacity-90">
-            Nebudete doma? Voličský průkaz pro 2. kolo vyřídíte osobně na úřadě
-            své městské části do středy 14. října do 16:00 – platí jen uvnitř
-            obvodu č. 21.
-          </p>
         ) : null}
 
         <div className="flex flex-wrap gap-4 justify-center">

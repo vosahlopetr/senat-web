@@ -121,18 +121,18 @@ function HeaderInner({ pathname }: { pathname: string }) {
               })}
               <li className="flex flex-col gap-4 mt-8 w-[80%] max-w-[300px] list-none xl:hidden">
                 <Link
-                  href="?modal=support"
+                  href="/jak-volit"
                   onClick={() => setIsOpen(false)}
                   className="btn btn-primary btn-lg"
                 >
-                  PŘIDEJTE SE
+                  JAK VOLIT
                 </Link>
               </li>
             </ul>
           </nav>
           <div className="hidden xl:flex gap-4 items-center">
-            <Link href="?modal=support" className="btn btn-primary">
-              PŘIDEJTE SE
+            <Link href="/jak-volit" className="btn btn-primary">
+              JAK VOLIT
             </Link>
           </div>
         </div>

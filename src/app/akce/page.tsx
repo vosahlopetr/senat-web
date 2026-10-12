@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import TrackedLink from "@/components/TrackedLink";
 import { buildPageMetadata } from "@/lib/seo";
-import { CONTACT_EMAIL, SITE_URL, VOLUNTEER_URL } from "@/lib/site-config";
+import { SITE_URL, VOLUNTEER_URL } from "@/lib/site-config";
 import {
   getEventDateParts,
   getEventIsoBounds,
@@ -203,12 +203,6 @@ async function UpcomingEventsSection() {
 }
 
 export default function AkcePage() {
-  const inviteMailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-    "Pozvánka pro Radka Sáblíka na sousedské setkání",
-  )}&body=${encodeURIComponent(
-    "Dobrý den pane řediteli,\n\nrádi bychom Vás pozvali na setkání v naší čtvrti.\n\nMísto (čtvrť / ulice): \nPředpokládaný termín: \nPočet účastníků (stačí 5–10 sousedů): \nTémata, která nás nejvíc pálí: \n\nKontakt na mě: \n",
-  )}`;
-
   return (
     <main id="main" className="pt-32 pb-24 md:pt-40 md:pb-32 px-4 md:px-8">
       <div className="max-w-[960px] mx-auto bg-cream text-accent p-6 sm:p-10 md:p-16 rounded-[2.5rem] md:rounded-[3rem] border-[3px] border-accent shadow-[-6px_6px_0px_var(--color-accent)]">
@@ -227,39 +221,6 @@ export default function AkcePage() {
           <Suspense fallback={<EventsSkeleton />}>
             <UpcomingEventsSection />
           </Suspense>
-
-          {/* Section: Pozvěte mě mezi sousedy */}
-          <h2 className="font-display text-[clamp(2rem,4vw,3rem)] uppercase leading-[0.9] text-accent mt-16 mb-4">
-            Pozvěte mě mezi sousedy
-          </h2>
-          <p className="!mt-0">
-            Pořádáte sousedské posezení ve vnitrobloku, setkání ve vašem domě,
-            debatu rodičů o školách a přijímačkách, nebo se scházíte v klubu
-            seniorů či sportovním oddílu?
-          </p>
-          <p>
-            Rád za vámi přijedu kamkoliv po Praze 5 a Praze 13. Stačí, když se
-            vás sejde <strong>5 až 10 sousedů</strong>. Nepotřebuji žádné pódium
-            ani mikrofon – přijdu si s vámi sednout na lavičku nebo ke stolu,
-            poslechnout si, co vás v ulici trápí, a na rovinu říct, co z pozice
-            senátora dokážu prosadit a co ne. Napište nám, ozveme se do dvou
-            dnů.
-          </p>
-
-          <div className="!mt-8 flex flex-wrap gap-4 justify-center">
-            <a
-              href={inviteMailto}
-              className="btn bg-green text-accent hover:bg-green/90 text-center !text-[0.9rem] !py-2.5 !px-5"
-            >
-              Pozvat na sousedské setkání
-            </a>
-            <Link
-              href="?modal=support"
-              className="btn bg-white text-accent hover:bg-white/90 text-center !text-[0.9rem] !py-2.5 !px-5"
-            >
-              Chci dostávat pozvánky
-            </Link>
-          </div>
         </div>
       </div>
     </main>

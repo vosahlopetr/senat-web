@@ -3,7 +3,6 @@ import Link from "next/link";
 import { getCountdownState, isMobilizationWindow } from "@/lib/countdown";
 import sablikImage from "../../public/images/sablik3.webp";
 import Countdown from "./Countdown";
-import ElectionSticker from "./ElectionSticker";
 
 export default function Hero() {
   // Persuasion-stage visitors (most of the campaign) want to join and see
@@ -35,9 +34,6 @@ export default function Hero() {
       </div>
 
       <div className="container lg:[--container-max:83rem] relative flex flex-col lg:flex-row items-center justify-start lg:justify-center min-h-[85svh] pt-10 pb-0 md:pt-12 md:pb-0 lg:pt-20 lg:pb-0 gap-4 text-center lg:text-left">
-        {/* Volební číslo 6 – campaign sticker in the top right corner on desktop */}
-        <ElectionSticker className="hidden lg:block absolute lg:top-6 lg:right-6 xl:top-8 xl:right-8 z-20 pointer-events-auto" />
-
         {/* Start position anchor for propeller hat: center of top of hero */}
         <div
           id="hat-hero-start"
@@ -48,25 +44,20 @@ export default function Hero() {
           <div className="relative w-full">
             <h1 className="relative z-1 font-display font-bold text-cream uppercase tracking-[-0.02em] leading-[0.9] select-none">
               <span className="sr-only">
-                Radko Sáblík – Oficiální web kandidáta do Senátu (Praha 5 a 13)
-                | Číslo 6:{" "}
+                Radko Sáblík – Oficiální web kandidáta do Senátu (Praha 5 a
+                13):{" "}
               </span>
-              <span className="block text-[clamp(4.375rem,15vw,7.5rem)] md:text-[clamp(4.5rem,8vw,7rem)]">
-                ODVAHA DĚLAT
-              </span>
-              <span className="block text-[clamp(4.375rem,15vw,7.5rem)] md:text-[clamp(4.5rem,8vw,7rem)]">
-                VĚCI{" "}
+              <span className="block text-balance text-[clamp(4.375rem,15vw,7.5rem)] md:text-[clamp(4.5rem,8vw,7rem)]">
+                VOLTE{" "}
                 <span className="marker-strike [&::after]:bottom-[-0.005em]! [&::after]:left-[-0.005em]!">
-                  JINAK
-                </span>
+                  SÁBLÍKA
+                </span>{" "}
+                VE 2. KOLE
               </span>
             </h1>
 
             <div className="relative z-1 flex justify-center w-full mt-2 lg:hidden pointer-events-none">
               <div className="relative">
-                {/* Volební číslo 6 – campaign sticker behind Sáblík overlapping the hero title on mobile */}
-                <ElectionSticker className="block lg:hidden absolute -top-8 -right-5 sm:-top-10 sm:-right-4 md:-top-12 md:-right-2 z-0 pointer-events-auto" />
-
                 <Image
                   src={sablikImage}
                   alt="Radko Sáblík – kandidát do Senátu"
@@ -99,18 +90,13 @@ export default function Hero() {
 
             <div className="flex gap-4 justify-center lg:justify-start flex-wrap mb-10 md:mb-12 lg:mb-0">
               {mobilize ? (
+                <Link href="/jak-volit" className="btn btn-primary">
+                  Jak volit
+                </Link>
+              ) : (
                 <>
                   <Link href="/jak-volit" className="btn btn-primary">
                     Jak volit
-                  </Link>
-                  <Link href="?modal=support" className="btn btn-secondary">
-                    Přidejte se k nám
-                  </Link>
-                </>
-              ) : (
-                <>
-                  <Link href="?modal=support" className="btn btn-primary">
-                    Přidejte se k nám
                   </Link>
                   <Link href="/cile" className="btn btn-secondary">
                     Můj program

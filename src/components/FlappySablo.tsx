@@ -424,10 +424,10 @@ export default function FlappySablo() {
                 </p>
                 <div className="flex flex-col md:flex-row gap-6 w-full justify-center">
                   <Link
-                    href="?modal=support"
+                    href="/jak-volit"
                     className="btn bg-green hover:bg-green/90 text-primary border-2 border-primary w-full md:w-auto text-xl md:text-2xl px-8 py-5 shadow-[0_10px_30px_rgba(110,231,183,0.4)] active:scale-95 transition-transform rounded-full flex items-center justify-center font-bold"
                   >
-                    PŘIDAT SE K NÁM
+                    JAK VOLIT
                   </Link>
                   <button
                     onClick={(e) => {

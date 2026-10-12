@@ -507,18 +507,6 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Přijďte si s námi užít sobotní večer – ať už dopadne výsledek jakkoli, bude to lepší jízda než ve Vegas! Pozvěte i kámoše a kámošky. Open doors od 19:30 v Phenomenu na Nádražní 84, ve 20:00 oficiální začátek programu a slovo kandidáta do Senátu PČR, pana ředitele Ing. Radka Sáblíka. Ve 20:10 bude slovo studentů k programu večera, od 20:15 pub kvíz s několika okruhy o ceny a od 20:45 diskotéka s hudbou na přání a DJ. Ochutnejte naše speciální drinky True Blue, Virgin Blue (nealko verze) a Sáblobombu. Budeme se na Vás těšit!",
   },
-  // 11. 10. (Ne): Lužiny (2. kolo)
-  {
-    id: "stanek-2kolo-luziny-2026-10-11",
-    date: "2026-10-11",
-    time: "09:30",
-    endTime: "15:00",
-    title: "Stánek – Lužiny",
-    place: "Stanice metra Lužiny, Praha 13",
-    mapUrl: "https://maps.app.goo.gl/DyAi8wUZ7Abbb6hK9",
-    description:
-      "Kontaktní kampaň před 2. kolem voleb do Senátu. Přijďte si popovídat s Radkem Sáblíkem a studenty u metra Lužiny.",
-  },
   // 12. 10. (Po): Plzeňská a Motol (2. kolo)
   {
     id: "stanek-2kolo-plzenska-motol-2026-10-12",

@@ -53,7 +53,7 @@ const BOILERPLATE_SHORT =
   "Ing. Radko Sáblík (* 1962), ředitel Smíchovské střední, kandiduje do Senátu v obvodu č. 21 – Praha 5 a Praha 13 – za koalici ODS, Starostů a Lidovců. Jeho kampaň iniciovali a vedou studenti.";
 
 const BOILERPLATE_STANDARD =
-  "Ing. Radko Sáblík (* 1962) je od roku 2002 ředitelem Smíchovské střední v Praze. V senátních volbách 9.–10. října 2026 kandiduje v obvodu č. 21 – Praha 5 a Praha 13 – jako společný kandidát koalice ODS, Starostů a Lidovců. Jeho kampaň je unikátní tím, že ji iniciovali a vedou studenti Smíchovské střední, nikoli profesionální agentura. Byl poradcem dvou ministrů školství, expertem národní Strategie 2030+ a je předsedou Unie Škol Inovativních. Heslo kampaně zní „Odvaha dělat věci jinak – a líp. Pro Prahu 5 a 13.“";
+  "Ing. Radko Sáblík (* 1962) je od roku 2002 ředitelem Smíchovské střední v Praze. V senátních volbách 9.–10. října 2026 kandiduje v obvodu č. 21 – Praha 5 a Praha 13 – jako společný kandidát koalice ODS, Starostů a Lidovců. Jeho kampaň je unikátní tím, že ji iniciovali a vedou studenti Smíchovské střední, nikoli profesionální agentura. Byl poradcem dvou ministrů školství, expertem národní Strategie 2030+ a je předsedou Unie Škol Inovativních. Heslo kampaně zní „Volte Sáblíka ve 2. kole.“";
 
 const QUICK_FACTS = [
   ["Kandidát", "Ing. Radko Sáblík (* 1. března 1962, Praha)"],
@@ -62,7 +62,7 @@ const QUICK_FACTS = [
   ["Volby", "9.–10. října 2026 (1. kolo)"],
   ["Nominace", "koalice ODS, Starostové a nezávislí a KDU-ČSL"],
   ["Kampaň", "iniciovali a vedou studenti Smíchovské střední"],
-  ["Slogan", "„Odvaha dělat věci jinak – a líp. Pro Prahu 5 a 13.“"],
+  ["Slogan", "„Volte Sáblíka ve 2. kole.“"],
 ] as const;
 
 const INTERVIEW_TOPICS = [

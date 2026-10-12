@@ -140,8 +140,8 @@ describe("getEventIsoBounds", () => {
 });
 
 describe("campaign schedule integrity", () => {
-  it("contains 46 scheduled events", () => {
-    expect(EVENTS.length).toBe(46);
+  it("contains 45 scheduled events", () => {
+    expect(EVENTS.length).toBe(45);
   });
 
   it("ensures every event has a unique ID and valid date format", () => {
@@ -220,10 +220,12 @@ describe("7-day visibility and leak prevention", () => {
 
     // Per-ID public lookup works for the published round-2 schedule.
     expect(
-      getPublicEventById("stanek-2kolo-luziny-2026-10-11", nowMs),
+      getPublicEventById("stanek-2kolo-plzenska-motol-2026-10-12", nowMs),
     ).toBeDefined();
     // …and the internal lookup still sees it.
-    expect(getEventById("stanek-2kolo-luziny-2026-10-11")).toBeDefined();
+    expect(
+      getEventById("stanek-2kolo-plzenska-motol-2026-10-12"),
+    ).toBeDefined();
   });
 
   it("getPublicEventById returns an event within the 7-day window, but rejects future events", () => {
