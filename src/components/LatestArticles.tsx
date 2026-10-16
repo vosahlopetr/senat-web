@@ -49,7 +49,7 @@ export default async function LatestArticles() {
         lightingIntensity={0}
         initialPosition={{ x: 0, y: 0 }}
         peelDirection={0}
-        className="w-[clamp(90px,25vw,140px)] max-w-[140px] md:max-w-[250px] md:w-[clamp(140px,20vw,250px)] bottom-0 right-[5%] z-[999] translate-y-1/2"
+        className="hidden md:block w-[clamp(90px,25vw,140px)] max-w-[140px] md:max-w-[250px] md:w-[clamp(140px,20vw,250px)] bottom-0 right-[5%] z-[999] translate-y-1/2"
       />
     </section>
   );

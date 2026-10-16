@@ -55,7 +55,7 @@ export default function Team() {
           alt=""
           width={250}
           height={250}
-          className="w-[clamp(70px,20vw,120px)] h-auto max-w-[120px] md:max-w-[250px] md:w-[clamp(140px,20vw,250px)] absolute top-8 left-6 md:top-16 md:left-16 -rotate-12 z-0 pointer-events-none select-none object-contain"
+          className="hidden md:block w-[clamp(70px,20vw,120px)] h-auto max-w-[120px] md:max-w-[250px] md:w-[clamp(140px,20vw,250px)] absolute top-8 left-6 md:top-16 md:left-16 -rotate-12 z-0 pointer-events-none select-none object-contain"
           aria-hidden="true"
         />
         <div className="container relative z-10">

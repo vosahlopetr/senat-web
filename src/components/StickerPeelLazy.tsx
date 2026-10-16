@@ -20,7 +20,10 @@ export default function StickerPeelLazy(props: StickerPeelProps) {
   const [loadInteractive, setLoadInteractive] = useState(false);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      window.matchMedia("(max-width: 767px)").matches
+    ) {
       return;
     }
 
