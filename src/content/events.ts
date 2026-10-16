@@ -555,18 +555,18 @@ export const EVENTS: readonly CampaignEvent[] = [
     description:
       "Kontaktní kampaň před 2. kolem voleb do Senátu. Přijďte si popovídat s Radkem Sáblíkem a studenty u metra Hůrka a Lužiny.",
   },
-  // 16. 10. (Pá): Anděl (2. kolo – dopolední stánek před volbami)
+  // 16. 10. (Pá): Anděl (2. kolo)
   {
     id: "stanek-2kolo-andel-2026-10-16",
     date: "2026-10-16",
-    time: "07:00",
-    endTime: "14:00",
+    time: "06:00",
+    endTime: "18:00",
     title: "Stánek – Anděl",
     place: "Anděl, Praha 5",
     mapUrl:
       "https://www.google.com/maps/search/?api=1&query=And%C4%9Bl,+Praha+5",
     description:
-      "Závěrečný dopolední kontaktní stánek před otevřením volebních místností 2. kola senátních voleb na Andělu.",
+      "Závěrečný kontaktní stánek 2. kola senátních voleb na Andělu.",
   },
   // 16. 10. (Pá): VOLBY 2. kolo
   {

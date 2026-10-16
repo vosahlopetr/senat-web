@@ -33,9 +33,9 @@ function CalendarDateLink({ children }: { children: React.ReactNode }) {
 }
 
 /**
- * Election-day message links to the how-to-vote page instead of the calendar
- * file: on the day itself the job is polling logistics (where, what to bring),
- * not plan-making.
+ * Runoff-weekend and election-day messages link to the how-to-vote page
+ * instead of the calendar file: once the vote is days away, the job is
+ * polling logistics (where, what to bring), not plan-making.
  */
 function HowToVoteLink({ children }: { children: React.ReactNode }) {
   return (
@@ -82,7 +82,8 @@ export default function CountdownClient({
       "Druhé kolo právě probíhá!"
     ) : state.phase === "between" ? (
       <>
-        Přijďte znovu volit <CalendarDateLink>tento víkend</CalendarDateLink>!
+        Přijďte znovu volit{" "}
+        <HowToVoteLink>tenhle pátek a tuto sobotu</HowToVoteLink>!
       </>
     ) : state.phase === "during" ? (
       <>
